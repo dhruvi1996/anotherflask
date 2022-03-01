@@ -1,6 +1,6 @@
 # Project Setup
 
- [![Run Tests, Build Dockerfile, Run on Heroku](https://github.com/dhruvi1996/anotherflask/actions)
+ [Run Tests, Build Dockerfile, Run on Heroku](https://github.com/dhruvi1996/anotherflask/actions)
 
 [MY APP](https://dhruvi-flaskapp.herokuapp.com/)
 

@@ -4,7 +4,6 @@
 
 [MY APP]https://dhruvi-flaskapp.herokuapp.com/
 
-
 ## Setting up CI/CD
 
 The result of this will be that when you create a pull request to merge a branch to master, it will deploy to your

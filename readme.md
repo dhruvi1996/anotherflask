@@ -1,11 +1,8 @@
 # Project Setup
-![Production Workflow](https://github.com/dhruvi1996/anotherflask/actions/workflows/prod.yml/badge.svg)
-(https://github.com/dhruvi1996/anotherflask/actions/workflows/prod.yml)
 
-* [Production Deployment](https://dhruvi-flaskapp.herokuapp.com/)
+ [![Run Tests, Build Dockerfile, Run on Heroku](https://github.com/dhruvi1996/anotherflask/actions)
 
-![Development Workflow](https://github.com/dhruvi1996/anotherflask/actions/workflows/dev.yml/badge.svg)
-(https://github.com/dhruvi1996/anotherflask/actions/workflows/dev.yml)
+[MY APP](https://dhruvi-flaskapp.herokuapp.com/)
 
 ## Setting up CI/CD
 
@@ -41,5 +38,4 @@ app/dyno.
 
 .pylintrc is the config for pylint, .coveragerc is the config for coverage and setup.py is a config file for pytest
 
-### WEBSITE 
-### https://dhruvi-flaskapp.herokuapp.com/
+## Testing CICD

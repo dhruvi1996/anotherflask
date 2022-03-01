@@ -1,8 +1,8 @@
 # Project Setup
 
-[![Run Tests, Build Dockerfile, Run on Heroku]https://github.com/dhruvi1996/anotherflask/actions
+ [![Run Tests, Build Dockerfile, Run on Heroku](https://github.com/dhruvi1996/anotherflask/actions)
 
-[MY APP]https://dhruvi-flaskapp.herokuapp.com/
+[MY APP](https://dhruvi-flaskapp.herokuapp.com/)
 
 ## Setting up CI/CD
 
@@ -38,4 +38,4 @@ app/dyno.
 
 .pylintrc is the config for pylint, .coveragerc is the config for coverage and setup.py is a config file for pytest
 
-#Testing CICD 
+## Testing CICD

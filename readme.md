@@ -1,10 +1,10 @@
 # Project Setup
-[![Production Workflow](https://github.com/dhruvi1996/anotherflask/actions/workflows/prod.yml)
+![Production Workflow](https://github.com/dhruvi1996/anotherflask/actions/workflows/prod.yml/badge.svg)
 (https://github.com/dhruvi1996/anotherflask/actions/workflows/prod.yml)
 
 * [Production Deployment](https://dhruvi-flaskapp.herokuapp.com/)
 
-[![Development Workflow](https://github.com/dhruvi1996/anotherflask/actions/workflows/dev.yml)
+![Development Workflow](https://github.com/dhruvi1996/anotherflask/actions/workflows/dev.yml/badge.svg)
 (https://github.com/dhruvi1996/anotherflask/actions/workflows/dev.yml)
 
 [MY APP](https://dhruvi-flaskapp.herokuapp.com/)

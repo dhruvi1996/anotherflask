@@ -1,4 +1,111 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 4
+    <div class="container-fluid">
+        <p class="fs=5"><strong>CI/CD is a set of methods that enables application developers to deliver code changes more frequently to customers through the use of automation.</strong></p>
+        <p class="fs=5"><strong><span class="fs=6">Continuous Integration :</strong></span> This is an automation will
+            automate your deployment on staging or production. If I push it into a Git repository, there is a remote
+            server will automatic clone your repository, build it, if success, fire a signal to your servers to pull
+            your repository.
+        </p>
+        <p class="fs=5"><strong><span class="fs=6">Continuous Deployment :</strong></span>  This is
+            an automation to recover your serving application without required any human intervention to minimise your
+            serving downtime. Like Python, Gunicorn support --reload to reload your application without need to exit,
+            any code changes will automatically reload. Flask itself has similar feature.
+        </p>
+    </div>
+    <div class="row align-items stretch">
+        <div class="col-6 py-3">
+            <h4><u>How CI/CD Works !!!</u></h4>
+            <p class="fs-5">The modern, fast-paced world of application development demands that multiple developers
+                work on a single app simultaneously. In a standard lifecycle, once developers are ready to test their
+                changes, they merge their individual code changes on a predetermined “merge day.” The merging process is
+                tedious and labor-intensive. It becomes even more intensive if a developer’s change affects another
+                developer’s change, ultimately forcing the team to rollback or spend hours on bug fixes.
+            </p>
+             <h4><u>How project workflow is!!!</u></h4>
+            <p class="fs-5">When i am  in development i probably want to check my code changes in real-time.
+                The common way to do this is mounting a volume with my source code in the container that has the
+                runtime of application. But for production this works differently.
+                In production we have a cluster with many nodes, and a volume is local to the node where our container
+                (or service) is running, then we cannot mount the source code without complex stuff that involve code
+                synchronization, signals, etc.
+                For both the files as they lie in same folder, it necessary to check; we check deployment if its green
+                no errors found we proceed with the production.
+                If it works as we expect then we can see image on dockerhub and than we proceed to push and see our main
+                app updated.
+            </p>
+
+            <h4 class="mt-5"><u>Steps to set up the project?</u></h4>
+            <ul class="list-unstyled">
+                <li>
+                    1. Create a new GitHub repository
+                </li>
+                <li>
+                    2. Create a new Docker repository in Dockerhub
+                </li>
+                <li>
+                    3. Create Heroku production app
+                </li>
+                <li>
+                    4. Create Heroku Development app
+                </li>
+                <li>
+                    5. Create API key within Heroku
+                </li>
+                <li>
+                    6. Add “secrets” to the GitHub
+                </li>
+                <li>
+                    7. Update info in prod.yml and dev.yml workflow files
+                </li>
+            </ul>
+            <h4 class="mt-5"><u>What to do next?</u></h4>
+            <ul class="list-unstyled">
+                <li>
+                    1. Clone repository or create your own project in PyCharm
+                </li>
+                <li>
+                    2. Make changes in new branch, commit
+                </li>
+                <li>
+                    3. Add remote repository that leads to your newly created repository
+                </li>
+                <li>
+                    4. Push your project to your new repo, comment on changes you made
+                </li>
+                <li>
+                    5. Create pull request to merge your changes to main branch
+                </li>
+                <li>
+                    6. Sit back and watch the process take off, first development will run
+                </li>
+                <li> tests, if everything passes
+                    the production will take over and build a new
+                </li>
+                <li> image for docker which will carry on to Heroku.
+                </li>
+            </ul>
+            <iframe src="https://giphy.com/embed/5Zesu5VPNGJlm" width="480" height="270"
+                    class="giphy-embed" ></iframe>
+
+        </div>
+
+
+        <div class="col-6 mt-3">
+            <img src="{{ url_for('static', filename='images/prodwork.png') }}" class="img-fluid" alt="prodwork">
+            <img src="{{ url_for('static', filename='images/workflows.png') }}" class="img-fluid py-2" alt="workflow">
+            <img src="{{ url_for('static', filename='images/workflows1.png') }}" class="img-fluid py-2" alt="workflow1">
+        </div>
+
+    </div>
+    <div class="col-5 py-2">
+
+
+    </div>
+
+
+
+
+    </div>
+    </div>
 {% endblock %}

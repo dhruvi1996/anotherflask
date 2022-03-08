@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/logopink.png') }}">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,31 +12,129 @@
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-        <title>{% block title %}{% endblock %}Dhruvi{{ name }} Website</title>
+        <title>{% block title %}{% endblock %}Dhruvi's{{ name }}Website</title>
     {% endblock %}
 
 </head>
 <body>
 
-    <div class="container">
+<!--================================ NAVBAR 1 ====================================!>
+<!
+<div class="container">
+    <div class="row">
+        <header class="mb-3">
+            <nav class="outset navbar navbar-expand-lg navbar-dark bg-dark py-1">
+                <div class="container">
+                    <a class="navbar-brand">Technology-IS601</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="about")}}">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1")}}">Git and Github</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2")}}">Docker</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page3")}}">Python and Flask</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page4")}}">CI/CD</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container"> ---->
+
+
+<div class="container">
+    <nav class="navbar outset mb-3 navbar-expand-md navbar-light navbar-default">
+        <div class="container">
+            <a class="navbar-brand hidden-xs" style="color: darkblue" href="{{ url_for('simple_pages.show', page="index")}}">
+                <img ml-5 src="{{ url_for('static', filename='images/logopink.png') }}" alt="logopink" style="margin-right: 30px" style="margin-left: 30px" height="100">Dhruvi Makadia
+                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('simple_pages.show', page="about")}}">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            IS601 Technology</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="page1")}}">Docker</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="page2")}}">Python & Flask</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="page3")}}">Git & Github</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="page4")}}">CI/CD</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
         {% block content %}
         {% endblock %}
     </div>
 
+<!-----------------------------------FOOTER----------------------------------->
+ <div class="container">
+        <footer class="d-flex justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-5 mb-1 verylightpink">&copy; {{ year }} Dhruvi Makadia / Environment: {{ deployment_environment
+                }}</p>
 
-<!-- Optional JavaScript; choose one of the two! -->
+            <a href="/"
+               class="col-md-2 d-flex align-items-center mb-2 mb-md-0 me-md-auto text-decoration-none">
+                <svg class="bi me-2" width="38" height="38">
+                    <img src="/static/images/logopink.png" height="38" width="38">
+                </svg>
+            </a>
+            <ul class="nav col-md-5 justify-content-end verylightpink">
+                <li class="nav-item"><a href="/" class="nav-link px-2 verylightgrey">Home</a></li>
+                <li class="nav-item"><a href="/page1" class="nav-link px-2 verylightpink">Docker</a></li>
+                <li class="nav-item"><a href="/page2" class="nav-link px-2 verylightpink">Python & Flask</a></li>
+                <li class="nav-item"><a href="/page3" class="nav-link px-2 verylightpink">Git</a></li>
+                <li class="nav-item"><a href="/page4" class="nav-link px-2 verylightpink">CI/CD</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link px-2 verylightpink">About</a></li>
+            </ul>
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <!-- <footer>
+        Environment: {{ deployment_environment }} - Copyright: {{ year }}
+        Message: {{ mymessage }} {{ format_price(100) }}
+    </footer> -->
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
--->
 <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
+</footer>
+ </div>
 </body>
 </html>

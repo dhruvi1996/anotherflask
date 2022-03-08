@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <!--<div class="container-fluid py-3"><h3>What is Git and Github ?</h3>
+    <div class="container-fluid py-3"><h4><u>What is Git and Github??</u></h4>
         <br>Here is a link to my git repository
         <a href="https://github.com/dhruvi1996/anotherflask.git">GIT REPOSITORY </a></br>
-
-        <p>
-            <u><span class="font25">Git</span></u> :is installed and maintained on your local system and gives you a
+        <p><u><span class="font25">Git</span></u> : is installed and maintained on your local system and gives you a
             self-contained
             record of your ongoing programming versions.
             It is a distributed version control system for tracking changes in source code during software development.
@@ -18,109 +16,30 @@
             to handle small to very large projects efficiently. Git is used to tracking changes in the source code,
             enabling multiple developers to work together on non-linear development.
         </p>
-        <div class="col-4"><img src="{{ url_for('static', filename='images/download.png') }}" class="img-fluid"
-                                alt="download.">
-        </div>
-        <p>
-            <u><span class="font25">GitHub</span></u> : GitHub is a web-based Git repository hosting service, which offers all
-            of the distributed revision
-            control and source code management (SCM) functionality of Git as well as adding its own features.
-            GitHub is a for-profit company that offers a cloud-based Git repository hosting service. Essentially, it
-            makes it a lot easier for individuals and teams to use Git for version control and collaboration.
-            GitHub’s interface is user-friendly enough so even novice coders can take advantage of Git. Without GitHub,
-            using Git generally requires a bit more technical savvy and use of the command line.
-            GitHub is a website and cloud-based service that helps developers store and manage their code, as well as
-            track and control changes to their code.
-        </p>
-        <h4><u>Git Commands used for this website:</u></h4>
-        <ul>
-            <li><strong>Repository</strong> : The first step is always to create a new local repository.
-                A repository contains all of your project's files and each file's revision history. You can discuss and
-                manage your project's work within the repository.
-                The git clone command is used to create a copy of a specific repository or branch within a repository.
-                As, for this website I have cloned professor Keith Williams's repository to mine and update the way wanted to show.
-            </li>
-            <li><strong>Branch</strong> : A branch in Git is simply a lightweight movable pointer to one of these
-                commits. The default branch name in Git is <u>master</u> . As you start making commits, you're given a
-                master
-                branch that points to the last commit you made. Every time you commit, the master branch pointer moves
-                forward automatically.I have merged my contents on the master branch. That brings to next topic.
-            </li>
-            <li><strong>Merge</strong> : Merging is Git's way of putting a forked history back together again. The git
-                merge command lets you take the independent lines of development created by git branch and integrate
-                them into a single branch.It takes the contents of a source branch and integrates it with a target
-                branch.
-            </li>
-            <li><strong>Commit</strong> : The "commit" command is used to save your changes to the local repository.
-                It sends the latest changes of the source code to the repository, making these changes part of the head
-                revision of the repository.We make changes in our files and doing command git commit.
-            </li>
-            <li><strong>Pull</strong> : Pull request is a process for a developer to notify team members that they have
-                completed a feature. Once their feature branch is ready, the developer files a pull request via their
-                remote server account. Pull request announces all the team members that they need to review the code and
-                merge it into the master branch.
-            </li>
-            <li><strong>Push</strong> : The Git push command is used to push the local repository content to a remote
-                repository. After a local repository has been modified, a push is executed to share the modifications
-                with remote team members. Pushing is the way commits are transferred from the local repository to the
-                remote repository.
-            </li>
-            <li><strong>Tags</strong> :
-                Tags mark a specific commit at a point in your repository history. When you tag a commit, you're
-                including all the changes before it. You can later compare tags to see the difference between two points
-                in history. Tags are commonly used to mark release versions, with the release name as the tag name.
-            </li>
-        </ul>
-    </div>-->
-
-    <div class=“container”>
-        <div class=“row”>
-            <div class=“col-8”>
-                <div class="container-fluid py-3"><h3>What is Git and Github ?</h3>
-                    <br>Here is a link to my git repository
-                    <a href="https://github.com/dhruvi1996/anotherflask.git">GIT REPOSITORY </a></br>
-
-                    <p>
-                        <u><span class="font25">Git</span></u> :is installed and maintained on your local system and
-                        gives you a
-                        self-contained
-                        record of your ongoing programming versions.
-                        It is a distributed version control system for tracking changes in source code during software
-                        development.
-                        It
-                        is designed for coordinating work among programmers, but it can be used to track changes in any
-                        set of
-                        files.
-                        Its goals include speed, data integrity, and support for distributed, non-linear workflows.
-                        It is a DevOps tool used for source code management. It is a free and open-source version
-                        control system
-                        used
-                        to handle small to very large projects efficiently. Git is used to tracking changes in the
-                        source code,
-                        enabling multiple developers to work together on non-linear development.
-                    </p>
-                    <!--<div class="col-4"><img src="{{ url_for('static', filename='images/download.png') }}" class="img-fluid"
-                                alt="download.">-->
-                    <p>
-                        <u><span class="font25">GitHub</span></u> : GitHub is a web-based Git repository hosting
-                        service,
-                        which offers all
-                        of the distributed revision
-                        control and source code management (SCM) functionality of Git as well as adding its own
-                        features.
-                        GitHub is a for-profit company that offers a cloud-based Git repository hosting service.
-                        Essentially, it
-                        makes it a lot easier for individuals and teams to use Git for version control and
-                        collaboration.
-                        GitHub’s interface is user-friendly enough so even novice coders can take advantage of Git.
-                        Without
-                        GitHub,
-                        using Git generally requires a bit more technical savvy and use of the command line.
-                        GitHub is a website and cloud-based service that helps developers store and manage their code,
-                        as
-                        well as
-                        track and control changes to their code.
-                    </p>
+        <div class="row align-items-start">
+            <div class="col-8">
+                <h4><u>GitHub</u></h4>
+                <p><span class="fs-3">G</span>itHub: is a web-based Git repository hosting service, which offers all
+                    of the distributed revision
+                    control and source code management (SCM) functionality of Git as well as adding its own features.
+                    GitHub is a for-profit company that offers a cloud-based Git repository hosting service.
+                    Essentially, it
+                    makes it a lot easier for individuals and teams to use Git for version control and collaboration.
+                    GitHub’s interface is user-friendly enough so even novice coders can take advantage of Git. Without
+                    GitHub,
+                    using Git generally requires a bit more technical savvy and use of the command line.
+                    GitHub is a website and cloud-based service that helps developers store and manage their code, as
+                    well as
+                    track and control changes to their code.
+                </p>
+            </div>
+            <div class="col-4"><img
+                    src="{{ url_for('static', filename='images/Screen-Shot-2021-11-28-at-1.37.49-AM.png') }}"
+                    class="img-fluid"
+                    alt="Screen-Shot-2021-11-28-at-1.37.49-AM">
+            </div>
+            <div class="row align-items-start">
+                <div class="col-7">
                     <h4><u>Git Commands used for this website:</u></h4>
                     <ul>
                         <li><strong>Repository</strong> : The first step is always to create a new local repository.
@@ -130,24 +49,20 @@
                             The git clone command is used to create a copy of a specific repository or branch within a
                             repository.
                             As, for this website I have cloned professor Keith Williams's repository to mine and update
-                            the
-                            way wanted to show.
+                            the way wanted to show.
                         </li>
                         <li><strong>Branch</strong> : A branch in Git is simply a lightweight movable pointer to one of
                             these
                             commits. The default branch name in Git is <u>master</u> . As you start making commits,
-                            you're
-                            given a
+                            you're given a
                             master
                             branch that points to the last commit you made. Every time you commit, the master branch
-                            pointer
-                            moves
+                            pointer moves
                             forward automatically.I have merged my contents on the master branch. That brings to next
                             topic.
                         </li>
                         <li><strong>Merge</strong> : Merging is Git's way of putting a forked history back together
-                            again.
-                            The git
+                            again. The git
                             merge command lets you take the independent lines of development created by git branch and
                             integrate
                             them into a single branch.It takes the contents of a source branch and integrates it with a
@@ -157,49 +72,40 @@
                         <li><strong>Commit</strong> : The "commit" command is used to save your changes to the local
                             repository.
                             It sends the latest changes of the source code to the repository, making these changes part
-                            of
-                            the head
+                            of the head
                             revision of the repository.We make changes in our files and doing command git commit.
                         </li>
                         <li><strong>Pull</strong> : Pull request is a process for a developer to notify team members
-                            that
-                            they have
+                            that they have
                             completed a feature. Once their feature branch is ready, the developer files a pull request
-                            via
-                            their
+                            via their
                             remote server account. Pull request announces all the team members that they need to review
-                            the
-                            code and
+                            the code and
                             merge it into the master branch.
                         </li>
                         <li><strong>Push</strong> : The Git push command is used to push the local repository content to
-                            a
-                            remote
+                            a remote
                             repository. After a local repository has been modified, a push is executed to share the
                             modifications
                             with remote team members. Pushing is the way commits are transferred from the local
-                            repository
-                            to the
+                            repository to the
                             remote repository.
                         </li>
                         <li><strong>Tags</strong> :
                             Tags mark a specific commit at a point in your repository history. When you tag a commit,
                             you're
                             including all the changes before it. You can later compare tags to see the difference
-                            between
-                            two points
+                            between two points
                             in history. Tags are commonly used to mark release versions, with the release name as the
-                            tag
-                            name.
+                            tag name.
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class=“col-4”>
-                <img src="{{ url_for('static', filename='images/download.png') }}" class="img-fluid"
-                     alt="download.">
+                <div class="col-5"><img src="{{ url_for('static', filename='images/githubss.png') }}" class="img-fluid
+                py-2"
+                                        alt="githubss">
+                </div>
             </div>
         </div>
     </div>
-
 {% endblock %}

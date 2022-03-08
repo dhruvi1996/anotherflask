@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container-fluid">
-        <p class="fs=5"><strong>CI/CD is a set of methods that enables application developers to deliver code changes more frequently to customers through the use of automation.</strong></p>
-        <p class="fs=5"><strong><span class="fs=6">Continuous Integration :</strong></span> This is an automation will
+        <p class="fs=5"><strong>CI/CD is a set of methods that enables application developers to deliver code changes
+            more frequently to customers through the use of automation.</strong></p>
+        <p class="fs=5"><span class="fs=6"><strong>Continuous Integration: </strong></span> This is an automation will
             automate your deployment on staging or production. If I push it into a Git repository, there is a remote
             server will automatic clone your repository, build it, if success, fire a signal to your servers to pull
             your repository.
         </p>
-        <p class="fs=5"><strong><span class="fs=6">Continuous Deployment :</strong></span>  This is
+        <p class="fs=5"><span class="fs=6"><strong>Continuous Deployment :</strong></span> This is
             an automation to recover your serving application without required any human intervention to minimise your
             serving downtime. Like Python, Gunicorn support --reload to reload your application without need to exit,
             any code changes will automatically reload. Flask itself has similar feature.
@@ -15,17 +16,11 @@
     </div>
     <div class="row align-items stretch">
         <div class="col-6 py-3">
-            <h4><u>How CI/CD Works !!!</u></h4>
-            <p class="fs-5">The modern, fast-paced world of application development demands that multiple developers
-                work on a single app simultaneously. In a standard lifecycle, once developers are ready to test their
-                changes, they merge their individual code changes on a predetermined “merge day.” The merging process is
-                tedious and labor-intensive. It becomes even more intensive if a developer’s change affects another
-                developer’s change, ultimately forcing the team to rollback or spend hours on bug fixes.
-            </p>
-             <h4><u>How project workflow is!!!</u></h4>
-            <p class="fs-5">When i am  in development i probably want to check my code changes in real-time.
+            <h4><u>Project Workflow :</u></h4>
+            <p>When i am in development i probably want to check my code changes in real-time.
                 The common way to do this is mounting a volume with my source code in the container that has the
-                runtime of application. But for production this works differently.
+                runtime of application. But for production this works differently. Hence, in my app project we have
+                two different workflows:
                 In production we have a cluster with many nodes, and a volume is local to the node where our container
                 (or service) is running, then we cannot mount the source code without complex stuff that involve code
                 synchronization, signals, etc.
@@ -34,78 +29,64 @@
                 If it works as we expect then we can see image on dockerhub and than we proceed to push and see our main
                 app updated.
             </p>
-
-            <h4 class="mt-5"><u>Steps to set up the project?</u></h4>
-            <ul class="list-unstyled">
+            <h4 class="mt-5">How I step up my project!!!</h4>
+            Following are the steps I used to create,clone,push my app !!!
+            <ul>
+                <ul class="mt-1">
                 <li>
-                    1. Create a new GitHub repository
+                     First step was to create a new GitHub repository named anotherflask.
                 </li>
                 <li>
-                    2. Create a new Docker repository in Dockerhub
+                    Now, I created a new Docker repo named as docker-flask in Dockerhub.
                 </li>
                 <li>
-                    3. Create Heroku production app
+                    Creating Heroku app along with its secret API key and added the 3 steps in my repo of github.
+                    added 'secrets' in actions folder in github.
                 </li>
                 <li>
-                    4. Create Heroku Development app
+                    So now we can see prod.yml,dev.yml workflow files in actions-> github.
                 </li>
                 <li>
-                    5. Create API key within Heroku
+                    I used pycharm to clone my github repo and created a new branch testing CICD.
                 </li>
                 <li>
-                    6. Add “secrets” to the GitHub
+                    The next step is to do changes, add pages, update files and do commit.
+                    I also created a remote repository for pushing onto the current .
                 </li>
                 <li>
-                    7. Update info in prod.yml and dev.yml workflow files
+                    Now comes Push command, i did push and commit through pycharm on new repository and saved the
+                    changes.
+                </li>
+                <li>
+                    See for errors, check, update do again and also check pytest in the terminal.
+                </li>
+                <li>
+                    Henceforth, all clear I procced further by making a new pull merge request for merging onto master/
+                    main branch.
+                </li>
+                <li>
+                    My last step, was to check my workflows in actions and see getting green checks.
+                    If development process is clear; that is no error the next step prodcution will
+                    take place.
+                </li>
+                <li>
+                    Now, production workflow will take over and it will build an image on docker; to see it we have to
+                    login dockerhub. Then it will be carry forward on heroku app.
+                </li>
+                <li>
+                    In last i went to herkoupapp.com login and saw my recenty activity; i open my app and finally it was
+                    there working !! ;)
+                    So i put the link in readme update changes.
+                    And here is project presented to you:
+                    <br>https://dhruvi-flaskapp.herokuapp.com/
+                    </br>
                 </li>
             </ul>
-            <h4 class="mt-5"><u>What to do next?</u></h4>
-            <ul class="list-unstyled">
-                <li>
-                    1. Clone repository or create your own project in PyCharm
-                </li>
-                <li>
-                    2. Make changes in new branch, commit
-                </li>
-                <li>
-                    3. Add remote repository that leads to your newly created repository
-                </li>
-                <li>
-                    4. Push your project to your new repo, comment on changes you made
-                </li>
-                <li>
-                    5. Create pull request to merge your changes to main branch
-                </li>
-                <li>
-                    6. Sit back and watch the process take off, first development will run
-                </li>
-                <li> tests, if everything passes
-                    the production will take over and build a new
-                </li>
-                <li> image for docker which will carry on to Heroku.
-                </li>
             </ul>
-            <iframe src="https://giphy.com/embed/5Zesu5VPNGJlm" width="480" height="270"
-                    class="giphy-embed" ></iframe>
-
         </div>
-
-
         <div class="col-6 mt-3">
-            <img src="{{ url_for('static', filename='images/prodwork.png') }}" class="img-fluid" alt="prodwork">
-            <img src="{{ url_for('static', filename='images/workflows.png') }}" class="img-fluid py-2" alt="workflow">
-            <img src="{{ url_for('static', filename='images/workflows1.png') }}" class="img-fluid py-2" alt="workflow1">
+            <img src="{{ url_for('static', filename='images/dev:prod.png') }}" class="img-fluid" alt="dev:prod">
+            <img src="{{ url_for('static', filename='images/worklows.png') }}" class="img-fluid py-4" alt="worklows">
         </div>
-
-    </div>
-    <div class="col-5 py-2">
-
-
-    </div>
-
-
-
-
-    </div>
     </div>
 {% endblock %}

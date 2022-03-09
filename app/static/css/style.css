@@ -85,46 +85,36 @@ a {
 .lightcoral {
     background-color: #ff9999;
 }
-
-
 /*-------------change color of non-active pill---------------------*/
 .nav-pills .pill-2 .nav-link:not(.active) {
     background-color: #282828;
     color: #eeccff;
 }
-
 /*------------------change color of active pill --------------------*/
 .nav-pills .pill-1 .nav-link {
     background-color: #101010;
     color: lightcoral;
 }
-
-
 .black {
     font-color: black;
 }
-
 .verylightpink {
     color: #8080ff;
 }
-
-
 .margin {
     margin-left: -350px;
-
 }
 
 .margin1 {
     margin-left: -150px;
 }
 
-.px-2 {
-    padding-left: ($ spacer * .50) !important;
-    padding-right: ($ spacer * .10) !important;
+.px-2
+{
+
 }
 
 .px-right {
-    padding-left:( $ spacer *5) !important;
 
 }
 
@@ -135,7 +125,7 @@ a {
 
 .box {
     display: flex;
-    align-items: right;
+
     justify-content: right;
 }
 

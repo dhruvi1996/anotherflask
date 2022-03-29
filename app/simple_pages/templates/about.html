@@ -1,4 +1,206 @@
 {% extends "base.html" %}
 {% block content %}
-    About Page
+    <!---------------------------------MAIN CONTENT-------------------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    <span class="font25">W</span>elcome to my website. My name is Dhruvi Makadia ; I am student for
+                    master in Data Science in class IS601.This is my project where I explained few new interesting
+                    technologies I learnt and have experimented and practiced in developing this app project. Here, for
+                    the project I have used Git, Docker , Python & Flask ,CI/CD continuous integration and deployment
+                    pipelines for developing the app. Below I have shown my PROJECT OUTLINE and the other webpages have
+                    the explanation of technologies.
+                </p>
+                <p>
+                    <span class="font25">PROJECT OUTLINE </span>
+                </p>
+                <p>
+                    <span class="font25">Another flask project</span>
+                    : it is the root of the project which contains all the files, images
+                    necessary for the application. Below explained all the files
+                <p>
+                    <span class="font25">•.github</span>
+                    : this folder contains the Workflow files of Github –>Actions
+                <p>prod.yml : this file contains all production deployment Workflow in Github->Actions.</p>
+                <p>dev.yml : this file contains all developmental deployment Workflow in Github->Actions.</p>
+                <p>
+                    <span class="font25">• .pytest_cache</span>
+                    : this folder holds all the records running in the project during the process of
+                    pytest
+                </p>
+                <p>
+                    <span class="font25">• app</span>
+                    : this is the application folder with few files.
+                </p>
+                <p>
+                    <span class="font19">context_processors</span>
+                    : to inject new variables automatically into the context of a template, so
+                    context processors exist in Flask.
+                </p>
+                <p>
+                    <span class="font19">simple_pages</span>
+                    : this folder has templates: it consists of individual page .html pages, and Flask
+                    Blueprint controller (init_py)
+                </p>
+                <p>
+                    <span class="font19">static</span>
+                    : the static folder contains assets used by the templates, including CSS files, JavaScript
+                    files, and images.
+                </p>
+                <p>
+                    <span class="font19">templates</span>
+                    : this folder contains base.html file which has the DOCTYPE, html tag, head tag, meta
+                    tag, title tag, and body tag, where markup from other templates will be dynamically inserted at
+                    runtime.
+                </p>
+                <p>
+                    <span class="font19">init__.py</span>
+                    : The init__.py file provides the interface to the app module.
+                </p>
+                <p>
+                    <span class="font19">run.py</span>
+                    : This is python file which allows to serve application in production.
+                </p>
+                <p>
+                    <span class="font25">• calculator</span>
+                    : not used file for this application
+                </p>
+                <p>
+                    <span class="font25">• tests </span>
+                    : in this folder testing helps ensure that your app will work as expected for your end
+                    users. So it has files which allow framework for running in the application.
+                    It has simple_pages_test.py, context_process_test.py, conftest.py , __init_py.
+                </p>
+                <p>
+                    <span class="font25">• .coveragerc</span>
+                    : this file is in the same directory as coverage.py it is its controller.
+                </p>
+                <p>
+                    <span class="font20">• .dockerignore</span>
+                    : file allows you to exclude files from the context like a . gitignore file ,
+                    allowing you to exclude files from your git repository. It helps to make build faster and lighter by
+                    excluding from the context big files or repository that are not used in the build.
+                </p>
+                <p>
+                    <span class="font25">• .gitignore</span>
+                    : this file tells Git which files to ignore when committing your project to the GitHub
+                    repository.
+                </p>
+                <p>
+                    <span class="font25">• .pylintrc </span>
+                    : Pylint searches up the hierarchy of Python packages until it finds a pylintrc file.
+                    This allows to specify coding standards on a module-by-module basis.
+                </p>
+                <p>
+                    <span class="font25">• docker-compose.yml</span>
+                    : Using Docker Compose, we can work on different components of the project on
+                    different Docker Containers and combine them to create a single application. It allows us to build
+                    multi-container Docker applications.
+                </p>
+                <p>
+                    <span class="font25">• Dockerfile </span>
+                    : this file is a text document that contains all the commands a user could call on the
+                    command line to assemble an image. We can create an image which runs in the container in the program
+                    application.
+                </p>
+                <p>
+                    <span class="font25">• heroku.yml</span>
+                    : this file is a manifest you can use to define our Heroku app. It allows to build
+                    docker images on Heroku.
+                </p>
+                <p>
+                    <span class="font25">• pytest.ini </span>
+                    : this file is used to hold pytest configurations ; what functions to be executed or
+                    ignore.
+                </p>
+                <p>
+                    <span class="font25">• Readme.md </span>
+                    : this is a Read Me file in which instructions, links , text, images are there can be
+                    used to set our project's description.
+                </p>
+                <p>
+                    <span class="font25">• Requirements.txt </span>
+                    : this files contains all the necessary packages needed to install in order to
+                    run the application.
+                </p>
+                <p>
+                    <span class="font25">• setup.py </span>
+                    : this file allows us to easily install Python packages for the running of application.
+                </p>
+            </div>
+            <div class="col-4">
+
+                <img src="{{ url_for('static', filename='images/1589426009100.png') }}" class="img-fluid py-5"
+                     alt="1589426009100">
+
+
+                <div><h4>Screenshot of all files of project</h4></div>
+
+
+                <img src="{{ url_for('static', filename='images/screenshot of all files.png') }}" class="float-right"
+                     alt="screenshot of all files" width="300"
+                     height="300">
+            </div>
+        </div>
+    </div>
 {% endblock %}
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<! Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+    </body>
+    </html>
+
+
+    -----------------------------------NAVBAR------------------------------------->
+<!-- <div class="container-fluid">
+        <div class="row">
+            <header class="mb-5">
+        <div class="container">
+            <a class="navbar-brand" style="color: darkorchidpink">
+                <img ml-5 src="{{ url_for('static', filename='images/logopink.png') }}" alt="logopink" style="margin-right: 30px" style="margin-left: 30px" height="100">
+                <span style="font-size: 20px ">Dhruvi Makadia</span></a>
+                 As a link---->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+                    <div class="container-fluid">
+                        <div class="navbar-brand">
+                            <img src="{{ url_for('static', filename='images/logopink.png') }}" width="75" height="75"
+                                 class="d-inline-block img-fluid" alt="logo"></div>
+                        <div class="navbar-brand">About</div>
+                        <ul class="nav nav-pills #00bda5">
+                            <li class="nav-item nav-pills pill-2 nav-link">
+                                <a class="nav-link" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item nav-pills pill-1 nav-link">
+                                <a class="nav-link active" aria-current="page" href="/about">About</a>
+                            </li>
+                            <li class="nav-item nav-pills pill-1 nav-link">
+                                <a class="nav-link " aria-current="page" href="/page1">Docker</a>
+                            </li>
+                            <li class="nav-item nav-pills pill-1 nav-link">
+                                <a class="nav-link " aria-current="page" href="/page2">Python & Flask</a>
+                            </li>
+                            <li class="nav-item nav-pills pill-1 nav-link">
+                                <a class="nav-link " aria-current="page" href="/page3">Git & Github</a>
+                            </li>
+                            <li class="nav-item nav-pills pill-1 nav-link">
+                                <a class="nav-link active" aria-current="page" href="/page4">CI/CD</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+        </div></nav>
+            </header>
+        </div>-->

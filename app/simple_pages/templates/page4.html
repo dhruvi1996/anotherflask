@@ -1,4 +1,92 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 4
+    <div class="container-fluid">
+        <p class="fs=5"><strong>CI/CD is a set of methods that enables application developers to deliver code changes
+            more frequently to customers through the use of automation.</strong></p>
+        <p class="fs=5"><span class="fs=6"><strong>Continuous Integration: </strong></span> This is an automation will
+            automate your deployment on staging or production. If I push it into a Git repository, there is a remote
+            server will automatic clone your repository, build it, if success, fire a signal to your servers to pull
+            your repository.
+        </p>
+        <p class="fs=5"><span class="fs=6"><strong>Continuous Deployment :</strong></span> This is
+            an automation to recover your serving application without required any human intervention to minimise your
+            serving downtime. Like Python, Gunicorn support --reload to reload your application without need to exit,
+            any code changes will automatically reload. Flask itself has similar feature.
+        </p>
+    </div>
+    <div class="row align-items stretch">
+        <div class="col-6 py-3">
+            <h4><u>Project Workflow :</u></h4>
+            <p>When i am in development i probably want to check my code changes in real-time.
+                The common way to do this is mounting a volume with my source code in the container that has the
+                runtime of application. But for production this works differently. Hence, in my app project we have
+                two different workflows:
+                In production we have a cluster with many nodes, and a volume is local to the node where our container
+                (or service) is running, then we cannot mount the source code without complex stuff that involve code
+                synchronization, signals, etc.
+                For both the files as they lie in same folder, it necessary to check; we check deployment if its green
+                no errors found we proceed with the production.
+                If it works as we expect then we can see image on dockerhub and than we proceed to push and see our main
+                app updated.
+            </p>
+            <h4 class="mt-5">How I step up my project!!!</h4>
+            Following are the steps I used to create,clone,push my app !!!
+            <ul>
+                <ul class="mt-1">
+                <li>
+                     First step was to create a new GitHub repository named anotherflask.
+                </li>
+                <li>
+                    Now, I created a new Docker repo named as docker-flask in Dockerhub.
+                </li>
+                <li>
+                    Creating Heroku app along with its secret API key and added the 3 steps in my repo of github.
+                    added 'secrets' in actions folder in github.
+                </li>
+                <li>
+                    So now we can see prod.yml,dev.yml workflow files in actions-> github.
+                </li>
+                <li>
+                    I used pycharm to clone my github repo and created a new branch testing CICD.
+                </li>
+                <li>
+                    The next step is to do changes, add pages, update files and do commit.
+                    I also created a remote repository for pushing onto the current .
+                </li>
+                <li>
+                    Now comes Push command, i did push and commit through pycharm on new repository and saved the
+                    changes.
+                </li>
+                <li>
+                    See for errors, check, update do again and also check pytest in the terminal.
+                </li>
+                <li>
+                    Henceforth, all clear I procced further by making a new pull merge request for merging onto master/
+                    main branch.
+                </li>
+                <li>
+                    My last step, was to check my workflows in actions and see getting green checks.
+                    If development process is clear; that is no error the next step prodcution will
+                    take place.
+                </li>
+                <li>
+                    Now, production workflow will take over and it will build an image on docker; to see it we have to
+                    login dockerhub. Then it will be carry forward on heroku app.
+                </li>
+                <li>
+                    In last i went to herkoupapp.com login and saw my recenty activity; i open my app and finally it was
+                    there working !! ;)
+                    So i put the link in readme update changes.
+                    And here is project presented to you:
+                    <br>https://dhruvi-flaskapp.herokuapp.com/
+                    </br>
+                </li>
+            </ul>
+            </ul>
+        </div>
+        <div class="col-6 mt-3">
+            <img src="{{ url_for('static', filename='images/dev:prod.png') }}" class="img-fluid" alt="dev:prod">
+            <img src="{{ url_for('static', filename='images/worklows.png') }}" class="img-fluid py-4" alt="worklows">
+        </div>
+    </div>
 {% endblock %}

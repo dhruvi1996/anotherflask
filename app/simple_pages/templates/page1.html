@@ -1,4 +1,103 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 1
+    <div class="container-fluid py-3"><h4><u>What is Docker?</u></h4>
+        <p class="fs-5"><span class="fs-3">T</span>his the link to pull container for running this website
+            locally.
+            <a href="https://hub.docker.com/repository/docker/dhruvi11/docker-flask">anotherflask</a>
+        </p>
+        <p><u><span class="font25">Docker</span></u> :
+            Docker is an open source containerization platform. It enables developers to package applications
+            into
+            containers—standardized executable components combining application source code with the operating
+            system
+            (OS)
+            libraries and dependencies required to run that code in any environment.
+            Docker Cloud uses Docker Hub as its native registry for storing both public and private
+            repositories. Once
+            you
+            push your images to Docker Hub, they will be available in Docker Cloud.
+        </p>
+        <h4><u>What is a docker hub?</u></h4>
+        <p><span class="font25">D</span>ocker Hub is the world's largest. library and community for container images.
+            Image result for Docker Hub
+            It is a hosted repository service provided by Docker for finding and sharing container images with
+            your team.
+        </p>
+    </div>
+    <div class="row align-items-start">
+        <div class="col-8">
+            <h4><u>How Docker Container starts!!</u></h4>
+            <p><span class="fs-3">H</span>ere is the link to pull container to run this website
+                locally.
+                <a href="https://hub.docker.com/repository/docker/dhruvi11/docker-flask">anotherflask</a>
+                Image can be pulled from command line using command <br><em>docker pull
+                    docker pull dhruvi11/docker-flask:tagname</em></p>
+            <p>
+                The ‘docker pull’ is a Docker command to download a Docker image or a repository locally on the
+                host from a public or private registry. When we run any container and the specified Docker image
+                is not present locally then it first pulls it from the registry.
+                After image is pulled one should navigate to a folder containing image and from
+                there it can be started using command <em>docker compose up --build</em>
+            </p>
+            <p>Now, the last step is to go to the browser;do localhost and see the app working !!! :)</p>
+        </div>
+        <div class="col-4"><img src="{{ url_for('static', filename='images/docker container.png') }}"
+                                class="img-fluid"
+                                alt="docker container">
+        </div>
+        <div class="container-fluid">
+            <div class="row align-items-start">
+                <div class="col-8">
+                    <h4><u>Docker Commands :</u></h4>
+                    <p><span class="fs-3">H</span>ere various basic docker commands are used by me for
+                        running,pushing applications.
+                    </p>
+                    <ul>
+                        <li><strong>docker build</strong> -
+                            Build an image from a Dockerfile.
+                        </li>
+                        <li><strong>docker commit</strong> -
+                            Create a new image from a container’s changes.
+                        </li>
+                        <li><strong>docker compose build</strong> –
+                            Build or rebuild services.
+                        </li>
+                        <li><strong>docker compose up</strong> –
+                            Running docker compose up --detach starts the containers in the background and leaves them
+                            running.
+                        </li>
+                        <li><strong>docker compose Pull</strong> –
+                            Pull service images.
+                        </li>
+                        <li><strong>docker compose Push</strong> –
+                            Push service images.
+                        </li>
+                        <li><strong>docker compose run</strong> -
+                            Run a one-off command on a service.
+                        </li>
+                        <li><strong>docker compose start</strong> -
+                            Start services
+                        </li>
+                        <li><strong>docker compose stop</strong> -
+                            Stop services
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-4"><img src="{{ url_for('static', filename='images/DOCKERBUILD.png') }}"
+                                        class="img-fluid"
+                                        alt="DOCKERBUILD">
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
+
+
+
+
+<div class="col-7"><img src="{{ url_for('static', filename='images/DOCKERBUILD.png') }}"
+                        class="img-fluid"
+                        alt="DOCKERBUILD">
+</div>

@@ -1,4 +1,91 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 2
+    <div class="container"><h4><u>What is Python?</u></h4>
+        <p><span class="fs-3">P</span>ython is commonly used for developing websites and software, task
+            automation, data analysis, and data visualization. Since it's relatively easy to learn, Python has been
+            adopted by many non-programmers such as accountants and scientists, for a variety of everyday tasks, like
+            organizing finances.
+        </p>
+    <div>
+    <div class="container"><h4><u>What is Pytest?</u></h4>
+        <p><span class="fs-3">P</span>ytest is a testing framework that allows users to write test
+                codes
+                using Python programming language. It helps you to write simple and scalable test cases for databases,
+                APIs,
+                or UI. PyTest is mainly used for writing tests for APIs. It helps to write tests from simple unit tests
+                to
+                complex functional tests.
+                <br>Here is a link containing pytest of page for my Website.
+                <a href="https://github.com/dhruvi1996/anotherflask/blob/master/tests/simple_pages_test.py">PYTEST</a>
+            <div class="row align-items-start">
+                <div class="col-sm-4 d-flex align-items-stretch">
+                    <p> pytest is the framework that makes it easy to write, test, and scale to support
+                        complex
+                        testing for the applications and libraries. It is the most popular Python package for testing.
+                        The
+                        basis for a rich ecosystem of testing is plugins and extensions.
+
+                        <br>Following this link you can see all tests included in this repository <a
+                                href="https://github.com/dhruvi1996/anotherflask/tree/master/tests">WEBSITE'S TESTS</a>
+                    </p>
+                </div>
+                <div class="col-sm-8 d-flex align-items-stretch">
+                    <div class="card text-white bg-light overflow-auto" style="height: 20rem;">
+                        <div class="card-body">
+                            <div class="card text-dark">
+                                <h5 class="card-title">Pytest</h5>
+                                <img src="{{ url_for('static', filename='images/Pytest-512x305.png') }}"
+                                     class="card-img-top"
+                                     alt="test">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4><u>What is Flask???</u></h4>
+            <u><p><span class="fs-3">Flask :</span></u> is a web framework, it’s a Python module
+                that lets you develop web applications easily. It’s has a small and easy-to-extend core: it’s a
+                microframework that doesn’t include an ORM (Object Relational Manager) or such features.
+                Flask is used for developing web applications using python, implemented on Werkzeug and Jinja2.
+                Advantages of using Flask framework are: There is a built-in development server and a fast debugger
+                provided. Here for the website i have developed and used flask-heroku project name.
+            </p>
+            <div class="row align-items">
+                <div class="col-6">
+                    <u><p><span class="fs-3">Flask Blueprints </span> </u>Basically, a flask blueprint is a way
+                        for you
+                        to organize your flask application into smaller and re-usable application.
+                        Just like a normal flask application, a blueprint defines a collection of views, templates and
+                        static assets.
+                        A Blueprint is a way to organize a group of related views and other code. Rather than
+                        registering
+                        views and other code directly with an application, they are registered with a blueprint. Then
+                        the
+                        blueprint is registered with the application when it is available in the factory function.
+                    </p>
+
+                    <u><p><span class="fs-3">Simple Pages:</span></u> we use these HTML files, (templates) to
+                        build all of your application pages, such as the main page where we’ll display the current blog
+                        posts, the page of the blog post, the page where the user can add a new post, and so on.
+                        Here for the project we had simple pages files consisting of base.html(root of the file) which
+                        stores the navbar information for all the website pages , also had templates which
+                        consists of all html files.
+                        <br>Following this link you can see all tests included in this repository <a
+                                href="https://github.com/dhruvi1996/anotherflask/tree/master/app/simple_pages/templates">
+                            simple pages</a>
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img src="{{ url_for('static', filename='images/3407178_5bd8_3.jpg.webp') }}" class="img-fluid"
+                         alt="3407178_5bd8_3">
+
+                    <img src="{{ url_for('static', filename='images/Screen Shot 2022-03-08 at 12.03.51 AM.png') }}" class="img-fluid py-4"
+                         alt="Screen Shot 2022-03-08 at 12.03.51 AM">
+
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+</div>
+

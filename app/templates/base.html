@@ -53,6 +53,21 @@
                             <li><a class="dropdown-item"
                                    href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a></li>
                         </ul>
+                         <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Python Fundamentals</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="AAAtesting") }}">AAA
+                                Testing</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="pylint") }}">Pylint
+                                tests</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="OOP") }}">OOP</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                   href="{{ url_for('simple_pages.show', page="solid") }}">SOLID Principles and Design Patterns</a></li>
+
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -61,7 +76,6 @@
     {% block content %}
     {% endblock %}
 </div>
-
 <!-----------------------------------FOOTER----------------------------------->
 <div class="container">
     <footer class="d-flex justify-content-between align-items-center py-3 my-4 border-top">
@@ -73,15 +87,15 @@
                 <img src="/static/images/logopink.png" height="38" width="38">
             </svg>
         </a>
-        <ul class="nav col-md-5 justify-content-end verylightpink">
-            <li class="nav-item"><a href="/" class="nav-link px-2 verylightgrey">Home</a></li>
+        <!--<ul class="nav col-md-5 justify-content-end verylightpink">
+            <li class="nav-item"><a href="/" class="nav-link px-2 verylightpink">Home</a></li>
             <li class="nav-item"><a href="/page1" class="nav-link px-2 verylightpink">Docker</a></li>
             <li class="nav-item"><a href="/page2" class="nav-link px-2 verylightpink">Python & Flask</a></li>
             <li class="nav-item"><a href="/page3" class="nav-link px-2 verylightpink">Git</a></li>
             <li class="nav-item"><a href="/page4" class="nav-link px-2 verylightpink">CI/CD</a></li>
             <li class="nav-item"><a href="/about" class="nav-link px-2 verylightpink">About</a></li>
-        </ul>
-
+        </ul>-->
+    </footer>
 
         <!-- <footer>
         Environment: {{ deployment_environment }} - Copyright: {{ year }}
@@ -93,11 +107,47 @@
                 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
                 crossorigin="anonymous"></script>
         <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    </footer>
+
+ <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') === window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Go Top</button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </div>
 </body>
 </html>
+
+
+
+
+
 
 
 <!--================================ NAVBAR 1 ====================================!>

@@ -1,15 +1,16 @@
 from os import getenv
 import datetime
 
+
 def utility_text_processors():
-    message = "Thank you for visiting"
+    message = "Thank You For Visiting"
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
 
     def current_year():
-        currentDateTime = datetime.datetime.now()
-        date = currentDateTime.date()
+        currentdatetime = datetime.datetime.now()
+        date = currentdatetime.date()
         year = date.strftime("%Y")
         return year
 
@@ -22,5 +23,4 @@ def utility_text_processors():
         year=current_year(),
         format_price=format_price
     )
-
 

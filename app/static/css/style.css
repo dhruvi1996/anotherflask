@@ -9,15 +9,15 @@ body {
 /*------------------------------ Navbar Custom -------------------------------*/
 .navbar-default {
     background-image: linear-gradient(#ffcccc, #DB7093);
-!important;
+/important;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: blueviolet !important;
+    color: #E30B5C !important;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #eeccff !important;
+    color: orange !important;
 }
 
 .navbar {
@@ -25,16 +25,16 @@ body {
 }
 
 .navbar-toggler {
-    border: 3px solid #303030 !important;
+    border: 3px solid #ffcccc !important;
 }
 
 .dropdown-menu {
-    background-color: #9c9c9c;
+    background-color: #ffcccc;
 }
 
 /*------------------- Color of links------------------------------------------*/
 a:hover {
-    color: #4682B4 !important;
+    color: orange !important;
 }
 
 a {
@@ -93,7 +93,7 @@ a {
 /*------------------change color of active pill --------------------*/
 .nav-pills .pill-1 .nav-link {
     background-color: #101010;
-    color: lightcoral;
+    color: yellowgreen;
 }
 .black {
     font-color: black;
@@ -163,3 +163,263 @@ ul {
 .card-body {
     background-color: palevioletred;
 }
+/*---------------zoom in images---------------------*/
+#zoomA {
+  /* OPTIONAL DIMENSIONS */
+  width: auto;
+  height: auto;
+
+  /*ANIMATE ZOOM */
+  /* ease | ease-in | ease-out | linear */
+  transition: transform ease-in-out 0.5s;
+}
+
+/*ZOOM ON HOVER */
+#zoomA:hover { transform: scale(1.7); }
+.contbcgrd {
+    background-color: lavenderblush;
+}
+/*-------- Back to top button ----------*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: papayawhip;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+    box-shadow: 0 0 5px #fff,0 0 10px #fff;
+}
+#myBtn:hover {
+  background-color: white;
+    color:black;
+}
+
+/*body {*/
+/*background-image: linear-gradient(to bottom right, #f2bdcd, #f2f3f4);*/
+/*}*/
+
+/*.magenta {*/
+/* color: #ca1f7b;*/
+/*}*/
+
+/*!*------------------------------ Navbar Custom -------------------------------*!*/
+/*.navbar-default {*/
+/*    background-image: linear-gradient(#ffcccc, #DB7093); !important;*/
+
+/*}*/
+/*.navbar-default .navbar-nav > li > a {*/
+/*    color: #E30B5C!important;*/
+/*}*/
+/*.navbar-default .navbar-nav > li > a:hover {*/
+/*    color: #803790 !important;*/
+/*}*/
+/*.fs-20 {*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*.fs-14 {*/
+/*    font-size: 14px;*/
+/*}*/
+/*.royalblue {*/
+/*   color: #4169E1   !important;*/
+/*}*/
+
+/*.navbar-toggler {*/
+/*    border: 3px solid lavender !important;*/
+/*}*/
+
+/*.dropdown-menu {*/
+/*    background-color: #ffe7ea;*/
+/*}*/
+
+/*!*------------------- Color of links------------------------------------------*!*/
+/*a:hover {*/
+/*    color: #803790!important;*/
+/*}*/
+/*a {*/
+/*    color: #E30B5C;*/
+/*}*/
+
+/*.hand {*/
+/* font-family: "lucida handwriting", "Courier New", monospace;*/
+/*}*/
+/*!*-------------------------------Borders---------------------------------*!*/
+
+/*.outset {*/
+/* border-style: outset;*/
+/* border-color: lightcoral;*/
+/* border-width: 6px;*/
+/*}*/
+
+/*.outset1 {*/
+/* border-style: outset;*/
+/* border-color: lightblue;*/
+/* border-width: 15px;*/
+/*}*/
+
+/*.inset {*/
+/* border-style: inset;*/
+/* border-color: royalblue;*/
+/* border-width: 10px;*/
+/*}*/
+/*!*----------------------------------Font Sizes-------------------------------*!*/
+/*.font25 {*/
+/* font-size: 25px;*/
+/*}*/
+/*.font25{*/
+
+/*font-size: 25px;*/
+/*}*/
+/*.font60{*/
+/*font-size: 60px !important;*/
+/*}*/
+/*.font18 {*/
+/*font-size: 18px;*/
+/*}*/
+
+/*.verylightpink {*/
+/* background-color: #f7bfbe;*/
+/*}*/
+/*!*---------------zoom in images---------------------*!*/
+/*#zoomA {*/
+/*  !* OPTIONAL DIMENSIONS *!*/
+/*  width: auto;*/
+/*  height: auto;*/
+
+/*  !*ANIMATE ZOOM *!*/
+/*  !* ease | ease-in | ease-out | linear *!*/
+/*  transition: transform ease-in-out 0.5s;*/
+/*}*/
+
+/*!*ZOOM ON HOVER *!*/
+/*#zoomA:hover { transform: scale(1.7); }*/
+/*.contbcgrd {*/
+/*    background-color: lavenderblush;*/
+/*}*/
+
+/*!*-------------change color of non-active pill---------------------*!*/
+/*!*.nav-pills .pill-2 .nav-link:not(.active) {*/
+/* background-color: #282828;*/
+/* color: white;*/
+/*} *!*/
+
+/*!*------------------change color of active pill --------------------*!*/
+/*!*.nav-pills .pill-1 .nav-link {*/
+/* background-color: #101010;*/
+/* color: white;*/
+/*}*!*/
+
+
+/*.back-to-top {*/
+/*  position: fixed;*/
+/*  right: 2rem;*/
+/*  bottom: 2rem;*/
+/*}*/
+/*.b1 {*/
+/*  border-top: 1px solid #8f8f8f;*/
+/*}*/
+/*.b2 {*/
+/*  border-top: 4px solid #8f8f8f;*/
+/*}*/
+
+/*.hidden {*/
+/*  display: none;*/
+/*}*/
+
+/*.offwhite {*/
+/*background-color: #aec6cf;*/
+/*}*/
+
+/*.verylightpink {*/
+/*    color: #8080ff;*/
+/*}*/
+
+/*.margin{*/
+/* margin-left: -350px;*/
+
+/*}*/
+/*.margin1 {*/
+/* margin-left: -150px;*/
+/*}*/
+
+/*.b {*/
+/*  flex: 1;*/
+/*  text-align: right;*/
+/*}*/
+
+/*.boxdiv {*/
+/*  width: auto;*/
+/*  height: auto;*/
+/*}*/
+
+/*.ml-auto {*/
+/*    margin-left: auto !important;*/
+/*}*/
+
+/*ul {*/
+/*    list-style-type: square;*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*.card  {*/
+/*    background-color: #f7bfbe;*/
+
+/*}*/
+/*.card-body {*/
+/*    background-color: #f7bfbe;*/
+
+/*}*/
+
+/*.ml-1 {*/
+/*  margin-left:($spacer * .25) !important;*/
+/*}*/
+
+/*.indent {*/
+/*    list-style: none;*/
+/*    width: auto;*/
+/*    text-indent: -20px; !* key property *!*/
+/*    margin-left: 20px; !* key property *!*/
+
+/*}*/
+/*li { margin-bottom: 10px; }*/
+
+/*!*-------- Back to top button ----------*!*/
+/*#myBtn {*/
+/*  display: none;*/
+/*  position: fixed;*/
+/*  bottom: 20px;*/
+/*  right: 30px;*/
+/*  z-index: 99;*/
+/*  font-size: 18px;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*  background-color: papayawhip;*/
+/*  color: black;*/
+/*  cursor: pointer;*/
+/*  padding: 15px;*/
+/*  border-radius: 15px;*/
+/*    box-shadow: 0 0 5px #fff,0 0 10px #fff;*/
+/*}*/
+/*#myBtn:hover {*/
+/*  background-color: white;*/
+/*    color:black;*/
+/*}*/
+
+/*!*----------------active tab highlight---------------*!*/
+/*!*.active {*/
+/*     color: yellowgreen !important;*/
+/*    background-color: dimgray;*/
+/*}*!*/
+
+/*.active {*/
+/*     color: palevioletred !important;*/
+/*    background-color: lightpink;*/
+/*    border-radius: 15px;*/
+/*}*/

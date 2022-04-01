@@ -16,7 +16,7 @@ def test_request_oop(client):
 
 def test_request_pyliny(client):
     """This tests Pylint page"""
-    response = client.get("/pyliny")
+    response = client.get("/pylint")
     assert response.status_code == 200
     assert b"What is Pytest?" in response.data
 

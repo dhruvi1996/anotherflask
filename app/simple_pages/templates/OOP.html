@@ -1,58 +1,71 @@
-
-
 {% extends "base.html" %}
 {% block content %}
-
-    <img src="{{ url_for('static', filename='images/OOPbanner.png') }}" class="img-fluid" alt="OOPbanner">
     <div class="row">
         <div class="col-6 py-4">
-            <img src="{{ url_for('static', filename='images/oopsystem.png') }}" class="img-fluid" alt="oopsystem">
+            <img src="{{ url_for('static', filename='images/image1.png') }}" class="img-fluid py-1" alt="OOPbanner">
         </div>
-
         <div class="col-6 py-4">
-            <h2 class="align-center mb-5"> Four major concepts of OOP</h2>
-
-            <p class="py-4">
-            <li class="fs-3">Encapsulation</li>
-            <li class="fs-3">Inheritance</li>
-            <li class="fs-3">Polymorphism</li>
-            <li class="fs-3">Abstarction</li>
+            <h2 class="align-center mb-5"> Object-oriented programming has four basic concepts: </h2>
+            <p class="py-0">
+            <li class="fs-4">Encapsulation</li>
+            <li class="fs-4">Inheritance</li>
+            <li class="fs-4">Polymorphism</li>
+            <li class="fs-4">Abstraction</li>
             </p>
         </div>
-
+        <h1 class="b1"></h1>
+        <p><strong>
+            OOps, concepts in java is to improve code readability and reusability by defining a Java program
+            efficiently. The main principles of object-oriented programming are abstraction, encapsulation, inheritance,
+            and polymorphism. These concepts aim to implement real-world entities in programs.
+        </strong>
+        </p>
+        <h4 class="neoblue">What is an object?</h4>
+        <p>
+            Objects are always called as instances of a class. Objects are created from class in java or any other
+            languages. Objects are those that have state and behavior. Objects are abstract data types (i.e., objects
+            behavior is defined by a set of values and operations).
+        </p>
+        <h4 class="neoblue">What is a class ?</h4>
+        <p>
+            Classes are like object constructors for creating objects. The collection of objects is said to be a class.
+            Classes are said to be logical quantities. Classes don’t consume any space in the memory. Class is also
+            called a template of an object. Classes have members which can be fields, methods and constructors. A class
+            has both static and instance initializers.
+        </p>
         <div class="container-fluid py-3">
             <h1 class="b1"></h1>
-            <h4 class="neonblue"><u>Encapsulation</u></h4>
-            <p class="fs-20"><span class="fs-4">T</span>he ability to "hide" the implementation and the data stored in
-                an
-                object. This
-                protects programs from the "side-effects" of unwanted changes. The Input-Process-Output (IPO)
-                chart is a good example of encapsulation.
-                The Input and Output represent the interface but the
-                process itself and any variables (other than the Input and Output variables) are considered to
-                be local.</p>
+            <h4 class="neonblue"><u>Encapsulation : </u></h4>
+            <p><span class="fs-4">E</span>ncapsulation is one of the concepts in OOPs concepts;
+                it is the process that binds together
+                the data and code into a single unit and keeps both from being safe from outside interference and
+                misuse. In this process, the data is hidden from other classes and can be accessed only through the
+                current class’s methods. Hence, it is also known as data hiding. Encapsulation acts as a protective
+                wrapper that prevents the code and data from being accessed by outsiders. These are controlled through a
+                well-defined interface.
+                Encapsulation is achieved by declaring the variables as private and providing public setter and getter
+                methods to modify and view the variable values. In encapsulation, the fields of a class are made
+                read-only or write-only. This method also improves the re-usability. Encapsulated code is also easy to
+                test for unit testing.
+            </p>
             <div class="row align-items-start">
-                <div class="col-7"><p class="fs-20"> Local variables altered in the process are separate from local
-                    variables
-                    in another
-                    process, even though they may share the same name . Since variables are declared in the Data
-                    Division of a COBOL program, they are global (not local) and are available to all paragraphs in
-                    the program. This makes variables in a program susceptible to alteration in a paragraph where
-                    they are not intended to be.</p>
-                    <p class="fs-20">Figure 1 - to the right, shows an example of encapsulation used in Calculator
-                        project
-                        which can be found here <a
-                                href="https://github.com/DianaZawislak/Docker_Git_Github_Info_Website/tree/master/calculator"
-                                class="card-link darkgrey" target="_blank">Diana Zawislak's Calculator.</a></p>
-                    <p class="fs-20"> Subtract, multiply and division objects (instances) that are stored inside
-                        calculation
-                        variable encapsulates
-                        the data and functionality to work on data to perform get_results calculations.</p>
+                <div class="col-7"><p class="fs-20"></p>
+                    <p>
+                        The general idea of this mechanism is simple. For example, you have an attribute that is not
+                        visible from the outside of an object. You bundle it with methods that provide read or write
+                        access. Encapsulation allows you to hide specific information and control access to the internal
+                        state of the object.</p>
+
+                    <p>
+                        Figure to the right, shows an example of encapsulation used in Calculator
+                        project. All methods are stored in calculation variable encapsulates the data and functionality
+                        to perform get_results.
+                    </p>
                 </div>
-                <div class="col-5 pb-4"><img src="{{ url_for('static', filename='images/encaps1.JPG') }}"
+                <div class="col-5 pb-4"><img src="{{ url_for('static', filename='images/e1.png') }}"
                                              class="img-fluid"
                                              alt="encaps1" id="zoomA">
-                    <p><em>Figure 1 All static methods showed here represent encapsulation.</em></p>
+                    <p><em>Example of Encapsulation.</em></p>
                 </div>
 
             </div>
@@ -61,26 +74,27 @@
             <h4 class="neonblue mt-5"><u>Inheritance</u></h4>
             <div class="row align-items-start">
                 <div class="col-8">
-                    <p class="fs-20 pr-5"><span class="fs-4">T</span>he ability to "add on" to a class, additional
-                        components
-                        and/or
-                        to
-                        "override"
-                        certain components of the class we are inheriting from to create a more specific model. Suppose
-                        we created a person class. The person could be refined to be a student by adding student
-                        characteristics and functions. Since a person may be defined to have a name, address, age, etc.,
-                        we could now say that a student is a person who attends a school, has a GPA, major etc.
-                        Figure 2 shows Calculation as a parent class and Figure 3 shows Addition class as a child
-                        class of Calculation. Addition class is extending Calculation class which demonstrates
-                        inheritance</p>
+                    <p><span class="fs-4">I</span>nheritance is a method in which one object
+                        acquires/inherits another object’s properties, and inheritance also supports hierarchical
+                        classification. The idea behind this is that we can create new classes built on existing
+                        classes, i.e., when you inherit from an existing class, we can reuse methods and fields of the
+                        parent class. Inheritance represents the parent-child relationship.
+                        We use inheritance mainly for method overriding and R. There are five types of inheritance
+                        single, multilevel, multiple, hybrid and hierarchical.</p>
+                    <p>
+                        Figure shows calculation as a parent class and another Figure shows multiplication class as a
+                        child class of Calculation. Multiplication class is extending Calculation class which
+                        demonstrates
+                        inheritance.
+                    </p>
                 </div>
                 <div class="col-4">
-                    <img src="{{ url_for('static', filename='images/parentclass.png') }}" class="img-fluid"
+                    <img src="{{ url_for('static', filename='images/ss1.png') }}" class="img-fluid"
                          alt="parentclass" id="zoomA">
-                    <p class="fs-14"><em>Figure 2 Calculation as a parent class</em></p>
-                    <img src="{{ url_for('static', filename='images/childclass.png') }}" class="img-fluid"
+                    <p class="fs-14"><em>Example of Inheritance: Parent class</em></p>
+                    <img src="{{ url_for('static', filename='images/ss2.png') }}" class="img-fluid"
                          alt="childclass" id="zoomA">
-                    <p class="fs-14 pb-4"><em>Figure 3 Addition as child class</em></p>
+                    <p class="fs-14 pb-4"><em> Child class</em></p>
 
                 </div>
             </div>
@@ -88,540 +102,368 @@
             <h4 class="neonblue mt-5"><u>Polymorphism</u></h4>
             <div class="row align-items-start">
                 <div class="col-6">
-
-
-                    <p class="fs-20"><span class="fs-4">L</span>iterally "many forms", this powerful feature allows us
-                        to
-                        have the same
-                        method take
-                        on different meanings depending on which class is instantiated. An example might be an abstract
-                        idea called a shape. The shape could have two characteristics: area and perimeter. There could
-                        be two type of shapes (inherited) called circle and square. We would indicate in the shape
-                        class, that there are two values to be determined, area and perimeter. The first determining a
-                        value indicating the number of square inches and the other inches.
-                        calculated. In our program an example of polymorphism is get_result (Figure 5).</p>
-
+                    <p><span class="fs-4">P</span>olymorphism refers to many forms, or it is a process
+                        that performs a single action in different ways. It occurs when we have many classes related to
+                        each other by inheritance. Polymorphism is of two different types, i.e., compile-time
+                        polymorphism and runtime polymorphism. One of the examples in Compile time polymorphism is that
+                        when we overload a static method in java. Run time polymorphism is also called a dynamic method
+                        dispatch is a method in which a call to an overridden method is resolved at run time rather than
+                        compile time. In this method, the overridden method is always called through the reference
+                        variable. By using method overloading and method overriding, we can perform polymorphism.
+                        Generally, the concept of polymorphism is often expressed as one interface, multiple methods.
+                        This reduces complexity by allowing the same interface to be used as a general class of action.
+                    </p>
+                    <p>
+                        From figure we can see"get_results()" shows polymorphism that is it can work on any class of
+                        calculations and give reults.
+                    </p>
                 </div>
-
-                <div class="col-6"><img src="{{ url_for('static', filename='images/poly3.jpg') }}"
-                                        class="img-fluid"
-                                        alt="poly3"> <em>Figure 4 Example of polymorphism</em>
+                <div class="col-6"><img
+                        src="{{ url_for('static', filename='images/Screen Shot 2022-03-31 at 6.13.58 PM.png') }}"
+                        class="img-fluid"
+                        alt="poly" id="zoomA"> <em> Example of polymorphism</em>
                 </div>
-                <div class="row align-items-start">
-                    <div class="col-5 pb-4"><img src="{{ url_for('static', filename='images/polygetresults.png') }}"
-                                                 class="img-fluid"
-                                                 alt="polygetresults" id="zoomA"> <em>Figure 5 Get-results demonstrates
-                        polymorphism in calculator program</em>
-                    </div>
-                    <div class="col-7 mt-5">
-                        <p class="fs-20 pb-4"><span class="fs-4">G</span>et_result can work on any class of it's type.
-                            We can always call get_result on any class of Calculation and always get result.</p>
-                    </div>
+            </div>
+        </div>
 
-
-                </div>
+        <h1 class="b1"></h1>
+        <h4 class="mt-3 neonblue mt-5"><u>Abstraction</u></h4>
+        <div class="row align-items-start">
+            <div class="col-7">
+                <p><span class="fs-4">A</span>bstraction is a process which displays only the
+                    information needed and hides the unnecessary
+                    information. We can say that the main purpose of abstraction is data hiding. Abstraction means
+                    selecting data from a large number of data to show the information needed, which helps in
+                    reducing programming complexity and efforts.
+                    There are also abstract class and abstract methods. An abstract class is a type of class that
+                    declares one or more abstract methods. An abstract method is a method that has a method
+                    definition but not implementation. Once we have modelled our object using data abstraction, the
+                    same sets of data can also be used in different applications—abstract classes, generic types of
+                    behaviours and object-oriented programming hierarchy. Abstract methods are used when two or more
+                    subclasses do the same task in different ways and through different implementations. An abstract
+                    class can have both the methods, i.e., abstract methods and regular methods.Abstraction is used to
+                    hide the internal functionality of the function from the
+                    users. The users only interact with the basic implementation of the function, but inner working
+                    is hidden. User is familiar with that "what function does" but they don't know "how it does."
+                    Let's take an example - When we use the TV remote to increase the
+                    volume. We don't know how pressing a key increases the volume of the TV. We only know to press
+                    the "+" button to increase the volume.
+                </p>
+                <p><span class="fs-4">F</span>igure shows abstraction example of my project.
+                    'get_results()' isn't directly performing multiplication or subtraction function. It is calling
+                    a loop and within
+                    the loop there is an multiply or subtract function. It's abstracting process of doing
+                    multiplication or subtraction on a list of numbers.
+            </div>
+            <div class="col-5 pb-4"><img src="{{ url_for('static', filename='images/ss3.png') }}"
+                                         class="img-fluid"
+                                         alt="abstrobject" id="zoomA"> <em>Example of Abstraction</em>
             </div>
 
             <h1 class="b1"></h1>
-            <h4 class="mt-3 neonblue mt-5"><u>Abstraction</u></h4>
+            <h4 class="neonblue mt-1"><u>Glossary :</u></h4>
+            <div class="row align-items-start">
+                <div class="col-5 pb-4">
+                    <p><h5 class="neonblue"><u>Method:</u></h5>
+                    <span class="fs-4">A</span> method is a function that “belongs to” an object. (In Python, the
+                    term method is not unique to class instances: other object types can have methods as well. For
+                    example, list objects have methods called append, insert, remove, sort, and so on.
+                    The method is implicitly used for an object for which it is called.
+                    The method is accessible to data that is contained within the class.</p>
+                    <p><strong>Class Method: </strong> A class method is a method that is bound to a class rather than
+                        its object. It doesn't require creation of a class instance, much like staticmethod.
+                    </p>
+                    <p><strong>Static Method: </strong> Static methods, much like class methods, are methods that are
+                        bound to a class rather than its object. They do not require a class instance creation. So, they
+                        are not dependent on the state of the object.
+                    </p>
+                    <p>The difference between a static method and a class method is: Static method knows nothing about
+                        the class and just deals with the parameters.</p>
+                </div>
+                <div class="col-7 pb-4">
+                    <p class="fs-20">
+                        <img src="{{ url_for('static', filename='images/m1.png') }}"
+                             class="img-fluid"
+                             alt="methods" id="zoomA"> <em>Example of Static&Class Method </em>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="b1"></h1>
+        <h4 class="neonblue mt-1"><u>Instantiation :</u></h4>
+        <div class="row">
+            <div class="col-7">
+                <p><span class="fs-4">I</span>nstantiating a class is creating a copy of the class
+                    which inherits all class variables and methods. Instantiating a class in Python is simple. To
+                    instantiate a class, we simply call the class as if it were a function, passing the arguments
+                    that the __init__ method defines. The return value will be the newly created object.
+                    Instantiation is the creation of a real instance or particular realization of an abstraction or
+                    template such as a class of objects or a computer process. To instantiate is to create such an
+                    instance by, for example, defining one particular variation of object within a class, giving it
+                    a name, and locating it in some physical place.
+                </p>
+            </div>
+            <div class="col-5 pb-4">
+            </div>
+
+        </div>
+        <h1 class="b1"></h1>
+        <h4 class="neonblue mt-1"><u>Constructor</u></h4>
+        <div class="row align-items-start">
+            <div class="col-7">
+                <p><span class="fs-4">The </span> constructors are generally used for instantiating an
+                    object. The task of constructors is to initialize(assign values) to the data members of the
+                    class when an object of the class is created. In Python the __init__() method is called the
+                    constructor and is always called when an object is created.It is s a special type of method
+                    (function) which is used to initialize the instance members of the class. Constructor definition
+                    is executed when we create the object of this class. Constructors also verify that there are
+                    enough resources for the object to perform any start-up task.
+                    The syntax of construction declaration : def __init__(self):
+                    # #body of the constructor
+                </p>
+                <p>
+                    <strong>Default constructor:</strong> The default constructor is a simple constructor which doesn’t
+                    accept any arguments. Its definition has only one argument which is a reference to
+                    the instance being constructed.
+                </p>
+                <p>
+                    <strong>Parameterized constructor:</strong> constructor with parameters is known as parameterized
+                    constructor. The parameterized constructor takes its first argument as a
+                    reference to the instance being constructed known as self and the rest of the
+                    arguments are provided by the programmer.
+                </p>
+            </div>
+            <div class="col-5">
+
+                <p class="fs-20">Constructors are of two types:
+                <li>Parameterized Constructor</li>
+
+                <li>Non-parameterized Constructor</li>
+                </p>
+            </div>
+            <div class="row align-items_end mt-5">
+                <div class="col-12">
+
+                    <div class="row">
+
+                    </div>
+                    <h1 class="b1"></h1>
+                    <h4 class="neonblue"><u>Instantiation</u></h4>
+                    <div class="row align-items-start">
+                        <div class="col-7">
+                            <p class="fs-20"><span class="fs-4">I</span>nstantiating a class is creating a copy
+                                of the
+                                class
+                                which
+                                inherits all class variables and
+                                methods. Instantiating a class in Python is simple. To instantiate a class, we
+                                simply
+                                call
+                                the
+                                class as if it were a function, passing the arguments that the __init__ method
+                                defines.
+                                The
+                                return value will be the newly created object.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="b1"></h1>
+            <h4 class="mt-1 neonblue"><u>Fixtures</u></h4>
             <div class="row align-items-start">
                 <div class="col-7">
-                    <p class="fs-20"><span class="fs-4">T</span>he ability to represent a complex reality in terms of a
-                        simplified model.
-                        Abstraction is not limited to OOP. It is used in procedural languages in top down step-wise
-                        refinement and through the use of subprograms, functions, etc. An example of an abstraction is
-                        the MOVE command in COBOL. While the MOVE may seem like a concrete statement, it truly is
-                        abstract. By MOVEing A-VAR to B-VAR, COBOL is required to do all of the editing, alignment, and
-                        error checking to be sure it is legal and to handle fields of dissimilar lengths and types.</p>
-                    <p class="fs-20">Abstraction is used to hide the internal functionality of the function from the
-                        users. The users only interact with the basic implementation of the function, but inner working
-                        is hidden. User is familiar with that "what function does" but they don't know "how it does."
-
-                        In simple words, we all use the smartphone and very much familiar with its functions such as
-                        camera, voice-recorder, call-dialing, etc., but we don't know how these operations are happening
-                        in the background. Let's take another example - When we use the TV remote to increase the
-                        volume. We don't know how pressing a key increases the volume of the TV. We only know to press
-                        the "+" button to increase the volume.
-
-                        That is exactly the abstraction that works in the object-oriented concept.
+                    <p><span class="fs-3">F</span>ixtures define the steps and data that
+                        constitute the arrange phase of a test (see Anatomy of a test). In pytest, they
+                        are functions you define that serve this purpose. They can also be used to
+                        define a test’s act phase; this is a powerful technique for designing more
+                        complex tests.
+                        The services, state, or other operating environments set up by fixtures are
+                        accessed by test functions through arguments. For each fixture used by a test
+                        function there is typically a parameter (named after the fixture) in the test
+                        function’s definition.
+                        Fixtures are functions, which will run before each test function to which it is
+                        applied. Fixtures are used to feed some data to the tests such as database
+                        connections, URLs to test and some sort of input data. Therefore, instead of
+                        running the same code for every test, we can attach fixture function to the
+                        tests and it will run and return the data to the test before executing each
+                        test.A function is marked as a fixture by − " @pytest.fixture".
                     </p>
-                    <p class="fs-20">In Python, an abstraction is used to hide the irrelevant data/class in order to
-                        reduce the complexity. It also enhances the application efficiency.</p>
-                    <p class="fs-20"><span class="fs-4">F</span>igure 5 shows abstraction example from our calculator
-                        program. Get_result isn't directly performing addition or multiplication function. It is calling
-                        a loop and within
-                        the loop there is an add or multiply function. It's abstracting process of doing addition or
-                        multiplication on a list of numbers.
-                </div>
-                <div class="col-5 pb-4"><img src="{{ url_for('static', filename='images/abstrobject.png') }}"
-                                             class="img-fluid"
-                                             alt="abstrobject" id="zoomA"> <em>Figure 5 Abstraction in calculator
-                    program
-                    polymorphism in calculator program</em>
-                </div>
-
-                <h1 class="b1"></h1>
-                <h4 class="neonblue mt-5"><u>Method</u></h4>
-                <div class="row align-items-start">
-                    <div class="col-5 pb-4">
-                        <p class="fs-20"><span class="fs-4">A</span> method in python is somewhat similar to a
-                            function, except it is associated with object/classes. Methods in python are very similar to
-                            functions except for two major differences.
-
-                            The method is implicitly used for an object for which it is called.
-
-                            The method is accessible to data that is contained within the class.</p>
-
-
-                        <img src="{{ url_for('static', filename='images/methods.png') }}"
-                             class="img-fluid"
-                             alt="methods" id="zoomA"> <em>Figure 6 Static and class method</em>
-                    </div>
-                    <div class="col-7 pb-4">
-                        <h5>Static Method</h5>
-                        <p class="fs-20">Static methods, much like class methods, are methods
-                            that
-                            are bound to a class rather than its object.
-
-                            They do not require a class instance creation. So, they are not dependent on the
-                            state of
-                            the
-                            object.
-
-                            The difference between a static method and a class method is:
-                        <ul class="indent">
-                            <li class="fs-20">1. Static method knows nothing about the class and just deals with
-                                the
-                                parameters.
-                            </li>
-                            <li class="fs-20">2. Class method works with the class since its parameter is always
-                                the class
-                                itself.
-                            </li>
-                        </ul>
-                        </p>
-                        <h5>Class Method</h5>
-                        <p class="fs-20">A class method is a method which is bound to the class and not the
-                            object of the class. They have the access to the state of the class as it takes a
-                            class parameter that points to the class and not the object instance. It can modify
-                            a class state that would apply across all the instances of the class</p>
-                        <h5>Instance Method</h5>
-                        <p class="fs-20">Instance attributes are those attributes that are not shared by objects. Every
-                            object has its own copy of the instance attribute.
-                            A class is a user-defined blueprint or prototype from which objects are created. Classes
-                            provide a means of bundling data and functionality together. Creating a new class creates a
-                            new type of object, allowing new instances of that type to be made. Each class instance can
-                            have attributes attached to it for maintaining its state. Class instances can also have
-                            methods (defined by its class) for modifying its state.</p>
-                    </div>
-
-
                 </div>
             </div>
-
             <h1 class="b1"></h1>
-            <h4 class="neonblue mt-5"><u>Object</u></h4>
+            <h4 class="mt-1 neonblue"><u>Namespace</u></h4>
             <div class="row">
                 <div class="col-7">
-                    <p class="fs-20"><span class="fs-4">A</span>n Object is an instance of a Class. A class is like a
-                        blueprint
-                        while an
-                        instance is a copy of
-                        the class with actual values. Python is object-oriented programming language that stresses on
-                        objects i.e. it mainly emphasizes functions. Objects are basically an encapsulation of data
-                        variables and methods acting on that data into a single entity.
-                        For a better understanding of the concept of objects considers an example, many of you have
-                        played CLASH OF CLANS, So let’s assume base layout as the class which contains all the
-                        buildings, defenses, resources, etc. Based on these descriptions we make a village, here the
-                        village is the object.
-
-                        Syntax:
-
-                        obj = MyClass()
-                        print(obj.x)</p>
-                    <p class="fs-20">Different objects belonging to same class can have different properties. For
-                        example,
-                        Person(Human) can be treated as a class which has properties such as name, age,gender etc. Every
-                        individual can be treated as an object of the class human or Person. Each individual will have
-                        different
-                        values of the properties of class Person.Everyone will have different names, age and gender.</p>
-                </div>
-                <div class="col-5 pb-4">
-                    <img src="{{ url_for('static', filename='images/object.png') }}"
-                         class="img-fluid"
-                         alt="object" id="zoomA"> <em>Figure 7 Objects in calculator</em>
-
-                </div>
-
-            </div>
-            <h1 class="b1"></h1>
-            <h4 class="neonblue mt-5"><u>Class</u></h4>
-            <div class="row align-items-start">
-                <div class="col-7">
-                    <p class="fs-20"><span class="fs-4">A</span> class is a user-defined blueprint or prototype from
-                        which
-                        objects are
-                        created. Classes provide
-                        a means of bundling data and functionality together. Creating a new class creates a new type
-                        of
-                        object, allowing new instances of that type to be made. Each class instance can have
-                        attributes
-                        attached to it for maintaining its state. Class instances can also have methods (defined by
-                        their class) for modifying their state.
-
-                        To understand the need for creating a class let’s consider an example, let’s say you wanted
-                        to
-                        track the number of dogs that may have different attributes like breed, age. If a list is
-                        used,
-                        the first element could be the dog’s breed while the second element could represent its age.
-                        Let’s suppose there are 100 different dogs, then how would you know which element is
-                        supposed to
-                        be which? What if you wanted to add other properties to these dogs? This lacks organization
-                        and
-                        it’s the exact need for classes.
-
-                        Class creates a user-defined data structure, which holds its own data members and member
-                        functions, which can be accessed and used by creating an instance of that class. A class is
-                        like
-                        a blueprint for an object.</p>
+                    <p><span class="fs-3">A</span> namespace is a collection of currently defined symbolic names along
+                        with information about the object that each name references. You can think of a namespace as a
+                        dictionary in which the keys are the object names and the values are the objects themselves.
+                        A namespace is basically a system to make sure that all the names in a program are unique and
+                        can be used without any conflict. You might already know that everything in Python—like strings,
+                        lists, functions, etc. —is an object. Another interesting fact is that Python implements
+                        namespaces as dictionaries.</p>
+                    <p>
+                        <strong>Types of namespaces :</strong>
+                        When Python interpreter runs solely without any user-defined modules, methods,
+                        classes,
+                        etc.
+                        Some functions like print(), id() are always present, these are built-in
+                        namespaces.
+                        When a
+                        user
+                        creates a module, a global namespace gets created, later the creation of local
+                        functions
+                        creates
+                        the local namespace. The built-in namespace encompasses the global namespace and
+                        the
+                        global
+                        namespace encompasses the local namespace.
+                    </p>
+                    <strong>The lifetime of a namespace :</strong>
+                    A lifetime of a namespace depends upon the scope of objects, if the scope of an
+                    object
+                    ends,
+                    the
+                    lifetime of that namespace comes to an end. Hence, it is not possible to access
+                    the
+                    inner
+                    namespace’s objects from an outer namespace.</p>
                 </div>
                 <div class="col-5">
-
-                    <p class="fs-20">Some points on Python class:
-                    <li class="fs-20">Classes are created by keyword class.</li>
-                    <li class="fs-20">Attributes are the variables that belong to a class.</li>
-                    <li class="fs-20">Attributes are always public and can be accessed using the dot (.)</li>
-                    </p>
-                    <p class="fs-20">Some classes from calculator are shown in figure 6</p>
+                    <img src="{{ url_for('static', filename='images/types_namespace-1.png') }}"
+                         class="img-fluid py-2 mt-3"
+                         alt="object">
                 </div>
-                <div class="row align-items_end mt-5">
-                    <div class="col-12">
-                        <h1 class="b1"></h1>
-                        <h4 class="neonblue mt-5"><u>Static Property</u></h4>
-                        <div class="row">
-                            <div class="col-7">
-                                <p class="fs-20"><span class="fs-4">W</span>hen we declare a variable inside a class but
-                                    outside any method, it is called as class or static variable in python. Class or
-                                    static
-                                    variable can be referred through a class but not directly through an instance.
+                <h1 class="b1"></h1>
+                <h4 class="mt-1 neonblue"><u>Unit testing</u></h4>
+                <div class="row align-items-start">
+                    <div class="col-8">
+                        <p><span class="fs-3">U</span>is a software testing method by which individual units of source
+                            code are put under various tests to determine whether they are fit for use (Source). It
+                            determines and ascertains the quality of your code.
+                            The unit test framework in Python is called unittest, which comes packaged with Python.
+                            Unit testing makes your code future proof since you anticipate the cases where your code
+                            could potentially fail or produce a bug. Though you cannot predict all of the cases, you
+                            still address most of them.</p>
+                        <p>
+                            A unit could be bucketed into various categories:
+                        <li>An entire module.</li>
+                        <li>An individual function.</li>
+                        <li>A complete interface like a class or a method.</li>
 
-                                    Class or static variable are quite distinct from and does not conflict with any
-                                    other
-                                    member
-                                    variable with the same name. Below is a program to demonstrate the use of class or
-                                    static
-                                    variable
-                                </p>
-                            </div>
-                            <h1 class="b1"></h1>
-                            <h4 class="neonblue"><u>Instantiation</u></h4>
-                            <div class="row align-items-start">
-                                <div class="col-7">
-                                    <p class="fs-20"><span class="fs-4">I</span>nstantiating a class is creating a copy
-                                        of the
-                                        class
-                                        which
-                                        inherits all class variables and
-                                        methods. Instantiating a class in Python is simple. To instantiate a class, we
-                                        simply
-                                        call
-                                        the
-                                        class as if it were a function, passing the arguments that the __init__ method
-                                        defines.
-                                        The
-                                        return value will be the newly created object.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h1 class="b1"></h1>
-                        <h4 class="mt-5 neonblue"><u>Constructor</u></h4>
-                        <div class="row align0items-start">
-                            <div class="col-7">
-                                <p class="fs-20"><span class="fs-3">A</span> constructor is a special type of method
-                                    (function)
-                                    which is
-                                    used
-                                    to initialize the instance
-                                    members of the class.
-                                    Constructor definition is executed when we create the object of this class.
-                                    Constructors
-                                    also
-                                    verify that there are enough resources for the object to perform any start-up task.
-                                </p>
-                            </div>
-                            <div class="col-1"></div>
-                            <div class="col-4"><p class="fs-20"> Constructors can be of two types.</p>
-
-                                <li class="fs-20">Parameterized Constructor</li>
-                                <li class="fs-20">Non-parameterized Constructor</li>
-
-                                </p>
-                            </div>
-                            <h1 class="b1"></h1>
-                            <h4 class="mt-5 neonblue"><u>Fixtures</u></h4>
-                            <div class="row align-items-start">
-                                <div class="col-7">
-                                    <p class="fs-20"><span class="fs-3">I</span>n testing, a fixture provides a defined,
-                                        reliable
-                                        and consistent
-                                        context for the tests. This
-                                        could include environment (for example a database configured with known
-                                        parameters) or
-                                        content
-                                        (such as a dataset).
-
-                                        Fixtures define the steps and data that constitute the arrange phase of a test
-                                        (see
-                                        Anatomy
-                                        of a
-                                        test). In pytest, they are functions you define that serve this purpose. They
-                                        can also
-                                        be
-                                        used
-                                        to define a test’s act phase; this is a powerful technique for designing more
-                                        complex
-                                        tests.
-
-                                        The services, state, or other operating environments set up by fixtures are
-                                        accessed by
-                                        test
-                                        functions through arguments. For each fixture used by a test function there is
-                                        typically
-                                        a
-                                        parameter (named after the fixture) in the test function’s definition.</p>
-                                </div>
-                            </div>
-                            <h1 class="b1"></h1>
-                            <h4 class="mt-5 neonblue"><u>Namespace</u></h4>
-                            <div class="row">
-                                <div class="col-7">
-                                    <p class="fs-20"><span class="fs-3">A</span> namespace is a system that has a unique
-                                        name
-                                        for
-                                        each and every
-                                        object in Python. An object
-                                        might be a variable or a method. Python itself maintains a namespace in the form
-                                        of a
-                                        Python
-                                        dictionary. Let’s go through an example, a directory-file system structure in
-                                        computers.
-                                        Needless to say, that one can have multiple directories having a file with the
-                                        same name
-                                        inside
-                                        every directory. But one can get directed to the file, one wishes, just by
-                                        specifying
-                                        the
-                                        absolute path to the file.
-                                        On similar lines, the Python interpreter understands what exact method or
-                                        variable one
-                                        is
-                                        trying
-                                        to point to in the code, depending upon the namespace. So, the division of the
-                                        word
-                                        itself
-                                        gives
-                                        a little more information. Its Name (which means name, a unique identifier) +
-                                        Space(which
-                                        talks
-                                        something related to scope). Here, a name might be of any Python method or
-                                        variable and
-                                        space
-                                        depends upon the location from where is trying to access a variable or a method.
-                                        Types of namespaces :
-
-                                        When Python interpreter runs solely without any user-defined modules, methods,
-                                        classes,
-                                        etc.
-                                        Some functions like print(), id() are always present, these are built-in
-                                        namespaces.
-                                        When a
-                                        user
-                                        creates a module, a global namespace gets created, later the creation of local
-                                        functions
-                                        creates
-                                        the local namespace. The built-in namespace encompasses the global namespace and
-                                        the
-                                        global
-                                        namespace encompasses the local namespace.
-                                        The lifetime of a namespace :
-
-                                        A lifetime of a namespace depends upon the scope of objects, if the scope of an
-                                        object
-                                        ends,
-                                        the
-                                        lifetime of that namespace comes to an end. Hence, it is not possible to access
-                                        the
-                                        inner
-                                        namespace’s objects from an outer namespace.</p>
-                                </div>
-                                <div class="col-5">
-                                    <img src="{{ url_for('static', filename='images/namespace.png') }}"
-                                         class="img-fluid"
-                                         alt="object">
-                                </div>
-
-
-                                <h1 class="b1"></h1>
-                                <h4 class="mt-5 neonblue"><u>Unit testing</u></h4>
-                                <div class="row align-items-start">
-                                    <div class="col-8">
-                                        <p class="fs-20"><span class="fs-3">U</span>nit testing is a technique in which
-                                            particular
-                                            module is tested
-                                            to check by developer himself
-                                            whether there are any errors. The primary focus of unit testing is test an
-                                            individual
-                                            unit
-                                            of system
-                                            to analyze, detect, and fix the errors.
-
-                                            Python provides the unittest module to test the unit of source code. The
-                                            unittest plays
-                                            an
-                                            essential
-                                            role when we are writing the huge code, and it provides the facility to
-                                            check whether
-                                            the
-                                            output is
-                                            correct or not.
-
-                                            Normally, we print the value and match it with the reference output or check
-                                            the output
-                                            manually.
-                                        </p>
-                                    </div>
-                                    <div class="col-4">
-                                        <img src="{{ url_for('static', filename='images/unittest.png') }}"
-                                             class="img-fluid"
-                                             alt="unittest" id="zoomA"> <em>Figure 8 Example of unit testing</em>
-                                    </div>
-                                    <h1 class="b1"></h1>
-                                    <h4 class="neonblue mt-3"><u>Type Hint</u></h4>
-                                    <div class="row align-items_end">
-                                        <div class="col-9">
-
-                                            <p class="fs-20"><span class="fs-3">T</span>ype hinting is a formal solution
-                                                to
-                                                statically indicate
-                                                the
-                                                type
-                                                of a value within your Python
-                                                code. It was specified in PEP 484 and introduced in Python 3.5. As the
-                                                code base
-                                                gets larger,
-                                                type
-                                                hints can help to debug and prevent some silly mistakes.</p></div>
-                                        <div class="col-3 pb-4"><img
-                                                src="{{ url_for('static', filename='images/typehint.png') }}"
-                                                class="img-fluid"
-                                                alt="typehint" id="zoomA"><em>Figure 9 In our calculator program we find
-                                            few type
-                                            hints,
-                                            one
-                                            of
-                                            them is tuple_list which will return tuple_list</em></div>
-                                    </div>
-                                    <h1 class="b1"></h1>
-                                    <h4 class="neonblue mt-5"><u>Type Cast</u></h4>
-                                    <div class="row align-items_end">
-                                        <div class="col-7">
-
-                                            <p class="fs-20"><span class="fs-3">T</span>ype Casting is the method to
-                                                convert the
-                                                variable data
-                                                type
-                                                into a certain data type in order to the operation required to be
-                                                performed by
-                                                users. The
-                                                examples
-                                                on the right show how Python will cast values as float or integer,
-                                                however in
-                                                this
-                                                project we
-                                                already defined values as float.</p>
-                                            <img
-                                                    src="{{ url_for('static', filename='images/typecast3.png') }}"
-                                                    class="img-fluid mt-1"
-                                                    alt="typec" id="zoomA"><em>Figure 10 Standardizing values to list of
-                                            floats</em></div>
-
-                                        <div class="col-1"></div>
-                                        <div class="col-4">
-                                            <img src="{{ url_for('static', filename='images/typec.png') }}"
-                                                 class="img-fluid"
-                                                 alt="typec" id="zoomA"><em>Figure 11 here Python will automatically
-                                            convert
-                                            result
-                                            to float</em>
-                                            <img src="{{ url_for('static', filename='images/typecast.png') }}"
-                                                 class="img-fluid mt-3"
-                                                 alt="typecast2" id="zoomA"><em>Figure 12 here Python will automatically
-                                            convert
-                                            result to integer</em>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-                        </ul>
+                        Normally, we print the value and match it with the reference output or check
+                        the output
+                        manually.
+                        </p>
                     </div>
+                    <div class="col-4">
+                        <img src="{{ url_for('static', filename='images/ut.png') }}"
+                             class="img-fluid "
+                             alt="unittest" id="zoomA"> <em>Example of unit testing</em>
+                    </div>
+                    <h1 class="b1"></h1>
+                    <h4 class="neonblue mt-3"><u>Type Hint</u></h4>
+                    <div class="row align-items_end">
+                        <div class="col-9">
+                            <p><span class="fs-3">T</span>ype hinting is a formal solution
+                                to
+                                statically indicate
+                                the
+                                type
+                                of a value within your Python
+                                code. It was specified in PEP 484 and introduced in Python 3.5.
+                                As the code base gets larger, type hints can help to debug and prevent some dumb
+                                mistakes. If you're using an IDE like PyCharm, you'll get a warning message whenever
+                                you've used the wrong data type, provided you're using type hints.
+                            </p>
+                        </div>
+                        <h1 class="b1"></h1>
+                        <h4 class="neonblue mt-1"><u>Type Cast</u></h4>
+                        <div class="row align-items_end">
+                            <div class="col-7">
+                                <p><span class="fs-3">T</span>ype Casting is the method to
+                                    convert the
+                                    variable data
+                                    type
+                                    into a certain data type.asting in python is therefore done using
+                                    constructor functions:
 
+                                <li>int() - constructs an integer number from an integer literal, a float
+                                    literal (by removing all decimals), or a string literal (providing the
+                                    string represents a whole number).
+                                </li>
+                                <li>float() - constructs a float number from an integer literal, a float
+                                    literal or a string literal (providing the string represents a float or
+                                    an integer).
+                                </li>
+                                <li>str() - constructs a string from a wide variety of data types, including
+                                    strings, integer literals and float literals.
+                                </li>
+                                </p>
+                            </div>
 
-                    </li>
-                    </ul>
+                            <div class="col-1"></div>
+                            <div class="col-4">
+                                <img src="{{ url_for('static', filename='images/tc.png') }}"
+                                     class="img-fluid py-1 "
+                                     alt="typec" id="zoomA"><em> Example of TypeCasting
+                            </em>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <h1 class="b1 pt-5"></h1>
-                <div class="container fs-14">
-                    <p style="font-size: small">Resources:
-                    <ul style="font-size: small">
-                        <li><a href="https://www.unf.edu/~broggio/cop3540/OOPTerms.htm" class="card-link darkgrey"
-                               target="_blank">Object
-                            Oriented Terms</a></li>
-                        <li>
-                            <a href="https://www.tutorialspoint.com/Explain-Inheritance-vs-Instantiation-for-Python-classes#:~:text=Instantiating%20a%20class%20is%20creating,__init__%20method%20defines."
-                               class="card-link darkgrey" target="_blank">Inheritance and Instantiation</a>
-                        </li>
-                        <li>
-                            <a href="https://www.geeksforgeeks.org/python-object/"
-                               class="card-link darkgrey" target="_blank">Object</a>
-                        </li>
-                        <li>
-                            <a href="https://www.javatpoint.com/python-constructors"
-                               class="card-link darkgrey" target="_blank">Constructors</a>
-                        </li>
-                        <li>
-                            <a href="https://docs.pytest.org/en/7.0.x/explanation/fixtures.html#:~:text=Fixtures%20define%20the%20steps%20and,for%20designing%20more%20complex%20tests."
-                               class="card-link darkgrey" target="_blank">Fixtures</a>
-                        </li>
-                        <li>
-                            <a href="https://www.programiz.com/python-programming/polymorphism"
-                               class="card-link darkgrey" target="_blank">Polymorphism</a>
-                        </li>
-                        <li><a href="https://realpython.com/lessons/type-hinting/"
-                               class="card-link darkgrey" target="_blank">Type Hint</a></li>
-                        <li>
-                            <a href="https://www.geeksforgeeks.org/type-casting-in-python-implicit-and-explicit-with-examples/"
-                               class="card-link darkgrey" target="_blank">Type Cast</a>
-                        </li>
-                        <li>
-                            <a href="https://www.programiz.com/python-programming/methods/built-in/staticmethod"
-                               class="card-link darkgrey" target="_blank">Static Method</a>
-                        </li>
-                        <li>
-                            <a href="https://www.tutorialspoint.com/class-or-static-variables-in-python"
-                               class="card-link darkgrey" target="_blank">Static Property</a>
-                        </li>
-                        <li>
-                            <a href="https://www.javatpoint.com/abstraction-in-python"
-                               class="card-link darkgrey" target="_blank">Abstraction</a>
-                        </li>
-
-                    </ul>
-                </div>
+                </ul>
             </div>
+            </li>
+            </ul>
+        </div>
+        <h1 class="b1 pt-5"></h1>
+        <div class="container fs-14">
+            <p style="font-size: small">Resources:
+            <ul style="font-size: small">
+                <li><a href="https://www.unf.edu/~broggio/cop3540/OOPTerms.htm" class="card-link darkgrey"
+                       target="_blank">Instantiation</a>
+                </li>
+                <li>
+                    <a href="https://www.tutorialspoint.com/Explain-Inheritance-vs-Instantiation-for-Python-classes#:~:text=Instantiating%20a%20class%20is%20creating,__init__%20method%20defines."
+                       class="card-link darkgrey" target="_blank">Constructor</a>
+                </li>
+                <li>
+                    <a href="https://www.geeksforgeeks.org/python-object/"
+                       class="card-link darkgrey" target="_blank">Instantiation</a>
+                </li>
+                <li>
+                    <a href="https://stackify.com/oop-concept-for-beginners-what-is-encapsulation/"
+                       class="card-link darkgrey" target="_blank">Encapsulations</a>
+                </li>
+                <li>
+                    <a href="https://docs.pytest.org/en/7.0.x/explanation/fixtures.html#:~:text=Fixtures%20define%20the%20steps%20and,for%20designing%20more%20complex%20tests."
+                       class="card-link darkgrey" target="_blank">Fixtures</a>
+                </li>
+                <li>
+                    <a href="https://www.programiz.com/python-programming/polymorphism"
+                       class="card-link darkgrey" target="_blank">Polymorphism</a>
+                </li>
+                <li><a href="https://realpython.com/lessons/type-hinting/"
+                       class="card-link darkgrey" target="_blank">Type Hint</a></li>
+                <li>
+                    <a href="https://www.geeksforgeeks.org/type-casting-in-python-implicit-and-explicit-with-examples/"
+                       class="card-link darkgrey" target="_blank">Type Cast</a>
+                </li>
+                <li>
+                    <a href="https://www.programiz.com/python-programming/methods/built-in/staticmethod"
+                       class="card-link darkgrey" target="_blank">Static Method</a>
+                </li>
+                <li>
+                    <a href="https://www.tutorialspoint.com/class-or-static-variables-in-python"
+                       class="card-link darkgrey" target="_blank">Static Property</a>
+                </li>
+                <li>
+                    <a href="https://www.javatpoint.com/abstraction-in-python"
+                       class="card-link darkgrey" target="_blank">Abstraction</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
 {% endblock %}

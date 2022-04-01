@@ -5,7 +5,7 @@ from calculator.Operations import Addition as Add, Subtraction as Sub, Multiplic
 class Calculation:
     """ calculation abstract base class"""
 
-    # pylint: disable=too-few-public-methods
+    #pylint: disable=too-few-public-methods
     def __init__(self, tuple_list: tuple):
         """ constructor method"""
         self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)

@@ -3,119 +3,110 @@
 
     <div class="container-fluid py-3">
         <h4 class="neonblue"><u>What is AAA testing?</u></h4>️ ️
-        <p class="fs-20"><span class="fs-4">T</span>he AAA pattern is a pattern for structuring tests. It breaks each
-            test down into three parts – Arrange, Act, and Assert – where each part is a step leading to the next. The
-            arrange step sets up the test’s input values. The act step prompts the primary function being tested. And
-            finally, the assert step verifies that the output of the function is what was expected.
-
-            In other words, each step in the pattern is a function whose return value is the input of the following
-            step.</p>
+        <p class="fs-20"><span class="fs-4">T</span>he AAA pattern is a pattern for structuring tests.<h6
+            class="neonblue"> AAA stands for: Arrange, Act, Assert.</h6>
+        <p>
+            The state of the data to set it up for testing.It will basically perform the setup and
+            initialization required for the test. In other words, each step in the pattern is a function whose return
+            value is the input of the following step.This pattern has several significant benefits. It creates a clear
+            separation between a test's setup, operations, and results. This structure makes the code easier to read and
+            understand. If you place the steps in order and format your code to separate them, you can scan a test and
+            quickly comprehend what it does. Arrange-Act-Assert is powerful because it is simple. It forces tests to
+            focus on independent, individual behaviors. It separates setup actions from the main actions. It requires
+            test to make verifications and not merely run through motions.
+        </p>
         <div class="row align items">
             <div class="col-8">
-                <h5 class="neonblue">Arrange</h5>
-                <p class="fs-20"><span class="fs-4">T</span>he block of code that sets up the conditions for the test
+                <h5 class="neonblue"><u>Arrange</u></h5>
+                <p><span class="fs-4">T</span>he block of code that sets up the conditions for the test
                     action.</p>
-                <p class="fs-20">Guidelines</p>
-                <ul>
-                    <li>Use a single block of code with no empty lines.</li>
-                    <li>Do not use assert in the Arrange block. If you need to make an assertion about your arrangement,
-                        then
-                        this is a smell that your arrangement is too complicated and should be extracted to a fixture or
-                        setup
-                        function and tested in its own right.
-                    </li>
-                    <li>Only prepare non-deterministic results not available after action.</li>
-                </ul>
+                <p>
+                    <strong>Arrange</strong> inputs and targets. Arrange steps should set up the test case. Here we have
+                    to use a single block of code with no empty lines. Setup the testing objects and prepare the
+                    prerequisites for your test.
+                    So in the arrange section you only have code required to setup that specific test. Here objects would
+                    be created, mocks setup (if you are using one) and potentially expectations would be set.
+                    The Arrange section should be large enough to create a class you want to test and set up the test data. Ideally, a couple of lines.
+                </p>
             </div>
-            <div class="col-4"><img src="{{ url_for('static', filename='images/aaa1.png') }}" class="img-fluid"
-                                    alt="aaa1"></div>
-
+            <div class="col-4"><img src="{{ url_for('static', filename='images/image5.png') }}" class="img-fluid"
+                                    alt="image5"></div>
         </div>
         <div class="row align-items">
             <div class="col-5 mb-5">
-                <h5 class="neonblue">Act</h5>
-                <p class="fs-20"><span class="fs-4">T</span>he line of code where the Action is taken on the SUT.</p>
-                <p class="fs-20">Guidelines</p>
-                <ul>
-                    <li>Start every Action line with result =.
-
-                        This makes it easier to distinguish test actions and means you can avoid the hardest job in
-                        programming:
-                        naming. When every result is called result, then you do not need to waste brain power wondering
-                        if it
-                        should be item = or response = etc. An added benefit is that you can find test actions easily
-                        with a
-                        tool like grep.
-                    </li>
-                    <li>Even when there is no result from the action, capture it with result = and then assert result is
-                        None.
-                        In this way, the SUT’s behaviour is pinned.
-                    </li>
-                    <li>If you struggle to write a single line action, then consider extracting some of that code into
-                        your
-                        arrangement.
-                    </li>
-                    <li>The action can be wrapped in with ... raises for expected exceptions. In this case your action
-                        will be
-                        two lines surrounded by empty lines.
-                    </li>
-                </ul>
+                <h5 class="neonblue"><u>Act</u></h5>
+                <p><span class="fs-4">T</span>he line of code where the Action is taken on the SUT.
+                Then there is the Act, which should be the invocation of the method being tested.
+                </p>
+                <p>
+                    <strong>Act</strong> – perform the actual work of the test.The Act section should be one line.
+                    Call the method or unit you want to test, and that’s it. The image shows how testing for calculator
+                    methods for addition, subtraction and multiplication is broken down to show Arrange, Act and Assert.
+                    we will do the actual unit testing and the result will be obtained from the test application.
+                    Basically we will call the targeted function in this step using the object that we created in the
+                    previous step.
+                </p>
             </div>
-
-            <div class="col-7"><img src="{{ url_for('static', filename='images/aaatest.png') }}"
+            <div class="col-7"><img src="{{ url_for('static', filename='images/Screen Shot 2022-03-31 at 1.57.40 PM.png') }}"
                                     class="img-fluid mt-5 mb-2"
                                     alt="aaa" id="zoomA">
-
-                <p class="font18"><em>This image shows how testing for calculator methods for addition, subtraction and
-                    multiplication is broken down to show Arrange, Act and Assert</em></p>
             </div>
-            <div class="row">
+            <p class="row">
                 <div class="col-7">
-
-                    <h5 class="neonblue">Assert</h5>
-                    <p class="fs-20"><span class="fs-4">T</span>he block of code that performs the assertions on the
-                        state
-                        of the SUT after the
-                        action.</p>
-                    <p class="fs-20">Guidelines</p>
-                    <ul>
-                        <li>Use a single block of code with no empty lines.
-
-
-                        </li>
-                        <li>First test result, then side effects.
-                        </li>
-                        <li>Limit the actions that you make in this block. Ideally, no actions should happen, but that
-                            is
-                            not always
-                            possible.
-                        </li>
-                        <li>Use simple blocks of assertions. If you find that you are repeatedly writing the same code
-                            to
-                            extract
-                            information from the SUT and perform assertions on it, then consider extracting an assertion
-                            helper.
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-5">
-                    <img src="{{ url_for('static', filename='images/aaa4.png') }}"
-                         class="img-fluid mb-2"
-                         alt="aaa4">
+                    <h5 class="neonblue"><u>Assert</u></h5>
+                    <p><span class="fs-4">T</span>his is the last step of a unit test application.
+                        In this step we will check and verify the returned result with expected results.</p>
+                <p>
+                    <strong>Assert</strong> section should ideally contain only one assert method to verify that
+                    the Act section has performed as expected. The Assert part of the test code is the section where you
+                    actually verify that your code behaves the way you intend it to. It usually includes one assertion
+                    for each of the features or scenarios covered in the Act section.
+                    It is the block of code that performs the assertions on
+                    the state of the SUT after the action.
+                    Here we use a single block of code with no empty lines.Limit the actions that you make in
+                    this block. Ideally, no actions should happen, but that is not always possible, instead we Use
+                    simple blocks of assertions. If you find that you are repeatedly writing the same code to
+                    extract information from the SUT and perform assertions on it, then consider extracting an assertion
+                    helper.
+                </p>
                 </div>
                 <h1 class="b1"></h1>
-                <h4 class="neonblue"><u>Why is testing important???</u></h4>
+                <h5 class="neonblue"><u>What are AAA benefits???</u></h5>
+                <p class="fs-4">
+                There are many benefits of AAA in unit testing, but the main one is that it saves time.
+                <li> It saves time because it helps developers write a test without thinking about how to structure the
+                    unit test method. With AAA, developers just follow the instructions that are provided to them.
+                </li>
+                <li>
+                    It saves time because it helps developers write a test without thinking about how to structure the
+                    unit test method. With AAA, developers just follow the instructions that are provided to them.
+                </li>
+                <li>
+                    In addition, you can use AAA for a variety of types of testing, including integration testing,
+                    system testing, and acceptance testing.
+                </li>
+                </p>
+                <h1 class="b1"></h1>
+                <h5 class="neonblue"><u>Why is testing important???</u></h5>
 
-                <p class="fs-20"><span class="fs-4">G</span>oal of python testing is to detect as many bugs and
-                    inconsistencies in the infancy of
-                    the application development as possible. As software scales in codebase size, it's impossible for a
-                    person or even a large team to keep up with all of the changes and the interactions between the
-                    changes. This is achieved by designing and scripting accurate and
-                    quality unit tests that can also serve as detailed documentation for the development process.</p>
+            <p class="fs-20"><span class="fs-4">G</span>oal of unit testing :</p>
+                    <p>Unit testing has the greatest effect
+                    on the quality of your code when it's an integral part of your software development workflow
+                    if software testing is performed effectively from the initial stage of product development.
+                    Software testing has to be taken up from the very first stage, i.e. from the code level itself; and
+                    this can be achieved when software developers perform the unit testing.
+                    With a proper unit testing practice in place, the developers and testers can help to save time as
+                    bugs can be identified early in the process as it is the initial phase of testing.It is essential to
+                    practice unit testing at the initial stage of the software testing process before planning for the
+                    integration testing.These unit test cases are written and executed by software developers.
+                    Unit testing makes your code future proof since you anticipate the cases where your code could
+                    potentially fail or produce a bug. Though you cannot predict all of the cases, you still address
+                      most of them.
+                </p>
                 <div class="row">
                     <div class="col-6">
-                        <p class="fs-20"> This
-                            ensures that bugs and other problems we catch in the first stages of the development, can be
+                        <p> The testing makes sure
+                            that  problems we catch in the first stages of the development, can be
                             fixed by
                             the development team.Automated testing is the only proven method for building reliable
                             software once
@@ -136,7 +127,7 @@
                             application at the same time is known as integration testing. User interface testing ensures
                             the
                             correctness of how a user would interact with the software.</p></div>
-                    <div class="col-6"><img src="{{ url_for('static', filename='images/testingpy.png') }}"
+                    <div class="col-6"><img src="{{ url_for('static', filename='images/aaa1.png') }}"
                                             class="img-fluid mb-2"
                                             alt="aaa"></div>
                 </div>
@@ -152,16 +143,12 @@
                    class="card-link darkgrey" target="_blank">AAA patern</a>
             </li>
             <li>
-                <a href="https://jamescooke.info/arrange-act-assert-pattern-for-python-developers.html"
+                <a href="https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80"
                    class="card-link darkgrey" target="_blank">AAA Explained</a>
             </li>
             <li>
-                <a href="https://quintagroup.com/cms/python/python-unit-testing#:~:text=Testing%20Goal,documentation%20for%20the%20development%20process."
-                   class="card-link darkgrey" target="_blank">Importance of tests</a>
-            </li>
-            <li>
-                <a href="https://www.fullstackpython.com/testing.html"
-                   class="card-link darkgrey" target="_blank">Importance of tests</a>
+                <a href="https://developers.mews.com/aaa-pattern-a-functional-approach/"
+                   class="card-link darkgrey" target="_blank">AAA Explained</a>
             </li>
             </p>
         </div>

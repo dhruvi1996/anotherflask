@@ -1,162 +1,108 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <img src="{{ url_for('static', filename='images/testsbanner.png') }}" class="img-fluid" alt="testsbanner">
-
-
     <div class="container-fluid">
-        <h4 class="neonblue mt-4"><u>What is Pytest?</u></h4>️ ️
-        <p class="fs-20 mt--2"><span class="fs-4">P</span>ytest is the framework that makes it easy to write, test, and
+        <h4 class="neonblue mt-4"><u>Pytest</u></h4>️ ️
+        <p class="fs-20 mt--2"><span class="fs-4">P</span>ytest is a testing framework based on python.</p>
+            <p>It is mainly used to write API test cases.
+            Pytest is the framework that makes it easy to write, test, and
             scale
             to support complex testing for the applications and libraries. It is the most popular Python package for
             testing. The basis for a rich ecosystem of testing is plugins and extensions.
-
             The way pytest is designed is as a very extensible system, easy to write plugins and there are a lot of
             plugins present in the pytest that are used for various purposes. Testing is very important before
             delivering the code in production.</p>
 
         <div class="row align-item-start">
             <div class="col-5">
-                <h5>Features Of pytest</h5>
-                <li>
-                    Does not require API to use.
-                </li>
-                <li>
-                    Can be used to run doc tests and unit tests.
-                </li>
-                <li>
-                    Gives useful failuråe information without the use of debuggers.
-                </li>
-                <li>
-                    Can be written as a function or method.
-                </li>
-                <li>
-                    Has useful plugins.
-                </li>
-                <h5 class="mt-3">Advantages Of pytest</h5>
-                <li>
-                    It is open-source.
-                </li>
-                <li>
-                    It can skip tests and automatically detect the tests.
-                </li>
-                <li>
-                    Tests are run parallel.
-                </li>
-                <li>
-                    Specific tests and subsets of tests can be run from the program.
-                </li>
-                <li>
-                    It is easy to start with as it has a very easy syntax.
-                </li>
-
+                <h5>Some of Advantages of pytest</h5>
+                <li>Can run tests in parallel. </li>
+                <li>Very easy to start with because of its simple and easy syntax.</li>
+                <li>Can run a specific test or a subset of tests.</li>
+                <li>Automatically detect tests</li>
+                <li>It has useful plugins, Skip tests and its open source.</li>
+                The screenshot here is of successfully ran pytest on calculator project as
+                    well as simple pages included in this git.
             </div>
-            <div class="col-7"><img src="{{ url_for('static', filename='images/passedpytest.png') }}"
+            <div class="col-7"><img src="{{ url_for('static', filename='images/Screen Shot 2022-03-08 at 12.03.51 AM.png') }}"
                                     class="img-fluid" alt="passedpytest" id="zoomA">
-                <p class="fs-14"><em>Figure 1 This is screenshot of successfully ran pytest on calculator project as
-                    well as simple pages included in this git</em></p>
             </div>
             <div class="row mt-4">
                 <div class="col-7">
-                    <h4 class="neonblue"><u>How to run Pytest?</u></h4>
-                    <p class="fs-20"> There are few way to run pytest. First of all it should be installed on your
-                        machine.
-                        This can be done by running command </p>
+                    <h4 class="neonblue"><u>Comands to run Pytest : </u></h4>
                     <ul class="list-unstyled">
                         <li><span class="offwhite">pip install -U pytest</span></li>
-                    </ul>
-                    <p class="fs-20"> Now you can check what version of pytest is installed and if it is compatible with
-                        your version of Python by running a command</p>
+                    </ul> <p> for instalation purpose.</p>
                     </li>
-                    <ul class="list-unstyled">
-                        <li><span class="offwhite">$ pytest --version</span></li>
-                    </ul>
-                    <p class="fs-20">Now we can proceed to run a test by running a command</p>
+                    <p > proceed to run a test by running a command</p>
                     <ul class="list-unstyled">
                         <li><span class="offwhite"> python -m pytest</span></li>
                     </ul>
-                    <p class="fs-20">Another way to run pytest when using Pycharm is to use play button in top bar on
-                        the
-                        right-hand side. the options are to run a test, to debug or run a test with coverage which I
-                        will soon
-                        discuss. Figure 2 shows those buttons.</p>
-                    <p class="fs-20">In our case however, the git we are working with to build this site as well as
-                        calculator
+                    <p>Here as we can see in our figure, we see docker container running and we use same
+                        interpreter from that container by using command <span class="offwhite">pytest</span>
+                        we can see all green passed pytest results.
                         program includes docker container that includes all necessary thing we need for the purpose of
                         this
                         exercise. That means we can skip and install and as long as our docker container is running, and
                         we are
-                        using an interpreter from that container we can simply use this command</p>
-                    <ul class="list-unstyled">
-                        <li><span class="offwhite">pytest</span></li>
-                    </ul>
+                        using an  we can simply use this command</p>
                 </div>
                 <div class="col-1"></div>
                 <div class="col-4 mt-4">
-                    <img src="{{ url_for('static', filename='images/playbutton.png') }}"
-                         class="img-responsive right-block d-block mx-auto" alt="playbutton" id="zoomA">
-                    <p class="fs-14"><em>Figure 2 These buttons provide one of the options to run pytest from
-                        Pycharm</em></p>
-                    <img src="{{ url_for('static', filename='images/pytestversion.png') }}"
-                         class="img-fluid" alt="pytestversion" id="zoomA">
-                    <p class="fs-14"><em>Figure 3 Pytest version shows after running pytest --version command</em></p>
                 </div>
-
                 <h1 class="b1"></h1>
                 <h4 class="neonblue mt-3"><u>What is Pylint?</u></h4>️ ️
-                <p class="fs-20"><span class="fs-4">P</span>ylint is a tool that checks for errors in Python code, tries
-                    to
-                    enforce a coding standard and looks for code
-                    smells. It can also look for certain type errors, it can recommend suggestions about how particular
-                    blocks
-                    can
-                    be refactored and can offer you details about the code's complexity. Figures 4 and 5 below show
-                    both, failed and successful pylint test outputs which I performed during creating this project</p>
-
-                <h4 class="neonblue mt-3"><u>How to Run Pylint in Pycharm?</u></h4>
+                <p class="fs-20"><span class="fs-4">P</span>ylint is a source-code, bug and quality checker for the
+                    Python programming language.</p>
+                <p>
+                    It can also look for certain type errors, it can recommend suggestions
+                    about how particular blocks can be refactored and can offer you details about the code's complexity.
+                    If you are coding in Python, the computer does not catch bugs for you. Therefore, you need a lint
+                    tool, like Pylint, to find errors. The default coding style used by Pylint is similar to PEP 8.
+                    Pylint will display number of messages as it does code analysis and code are given an
+                    overall mark based on number and severity of warnings and errors.
+                    itself. It is a preferred tool having special abilities to check length of code, provides
+                    the ability to check code as per coding standards such as well-formed variable names.
+                    This also checks if user is using imported modules.
+                </p>
+                <h4 class="neonblue mt-3"><u>Installation & Running Pylint in Pycharm?</u></h4>
                 <div class="row aling-items-start">
                     <div class="col-6">
-                        <p class="fs-20"><span class="fs-4">P</span>ylint can be installed using traditional way by
-                            running command in terminal</p>
-                        <ul class="list-unstyled">
-                            <li><span class="offwhite">pip install pylint</span></li>
-                        </ul>
-                        <p class="fs-20">Another way to integrate it in PyCharm is:</p>
-                        <ul class="list-unstyled indent">
+                        <p ><span class="fs-4">I</span>f we are using Python simply using <span
+                                class="offwhite">pip install pylint</span> this command we can install pylint. While,
+                            even through pycharm its also possible using :
+                            <ul class="list-unstyled indent">
                             <li> 1. Go to Preferences > Plugins > Browse repositories...</li>
-
                             <li>2. Right-click on the plugin named Pylint, select Download and Install and restart
                                 PyCharm
                                 when
                                 prompted
                             </li>
                         </ul>
-
-
-                        <p class="fs-20">If the plugin is not finding the Pylint executable (e.g. is not inside the PATH
-                            environmental
-                            variable), you can specify it manually using the plugin settings:</p>
-                        <ul class="list-unstyled indent">
-                            <li>1. Preferences > Other Settings > Pylint or simply click the gear icon from the side bar
-                                of
-                                the
-                                Pylint tool window
-                            </li>
-
-                            <li>2. Type the path directly or use the Browse button to open a file selection dialog</li>
-
-                            <li>3. Press the Test button to check if the plugin is able to run the executable</li>
-                        </ul>
-                        <p class="fs-20">In our program using docker container we can run pylint test using command:</p>
+                        </p>
+                        <p>In our project using docker container we can run pylint using command:</p>
                         <ul class="list-unstyled">
                             <li><span class="offwhite">pytest --pylint</span></li>
                         </ul>
-                        <p class="fs-20">Pylint has an advanced message control for its checks, offering the ability to
-                            enable / disable a
-                            message either from the command line or from the configuration file, as well as from the
-                            code
-                            itself. Figure 6 shows examples of <em>pylint disable</em> message used in calculator
-                            program</p>
+                        <p><strong>Running :</strong></p>
+                        <p>
+                            Pylint is meant to be called from the command line.
+                            You should give Pylint the name of a
+                            python package or module, or some number of packages or modules. Pylint will not import this
+                            package or module, though uses Python internals to locate them and as such is subject to the
+                            same rules and configuration.
+                            <ul class="list-unstyled">
+                            <span class="offwhite">pylint mymodule.py</span></ul>
+                        instead of mymodule any filename can be present .
+
+                        </p>
+
+                        <p><strong>Pylint</strong>  is fully user customizable and has integral special functions to
+                            control individual errors and alerts within the user’s code. It gives user flexibility to
+                            write their own custom plugin and executable from an extensive configuration file.
+
+                            Figure shows examples of <em>pylint disable</em> message used in calculator
+                            program.
+                        </p>
                     </div>
 
 
@@ -167,9 +113,9 @@
                         <img src="{{ url_for('static', filename='images/pylintpass.png') }}"
                              class="img-fluid" alt="pylintpass" id="zoomA">
                         <p class="fs-14"><em>Figure 5 Results of successfully passed pylint test</em></p>
-                        <img src="{{ url_for('static', filename='images/pylintdisable.png') }}"
-                             class="img-fluid" alt="pylintdisable" id="zoomA">
-                        <p class="fs-14"><em>Figure 6 The use of pylint disable message</em></p>
+                        <img src="{{ url_for('static', filename='images/Screen Shot 2022-03-31 at 3.58.37 PM.png') }}"
+                             class="img-fluid py-5" alt="pylintdisable" id="zoomA">
+                        <p class="fs-14"><em>Figure 6 </em></p>
                     </div>
 
                     <h1 class="b1"></h1>
@@ -261,32 +207,6 @@
                     and ascertains the quality of your code.</p>
                 <div class="row">
                     <div class="col-8">
-                        <p class="fs-20"> Generally, when the development process is complete, the developer codes
-                            criteria, or the
-                            results that are known to be potentially practical and useful, into the test script to
-                            verify a
-                            particular unit's correctness. During test case execution, various frameworks log tests that
-                            fail any criterion and report them in a summary.
-
-                            The developers are expected to write automated test scripts, which ensures that each and
-                            every
-                            section or a unit meets its design and behaves as expected.
-
-                            Though writing manual tests for your code is definitely a tedious and time-consuming task,
-                            Python's built-in unit testing framework has made life a lot easier.
-
-                            The unit test framework in Python is called unittest, which comes packaged with Python.
-
-                            Unit testing makes your code future proof since you anticipate the cases where your code
-                            could
-                            potentially fail or produce a bug. Though you cannot predict all of the cases, you still
-                            address
-                            most of them.</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="{{ url_for('static', filename='images/unittest1.png') }}"
-                             class="img-fluid" alt="unittest1">
-
                     </div>
                 </div>
             </div>

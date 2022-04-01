@@ -1,8 +1,6 @@
 """Testing the Calculator with AAA"""
 import pytest
 from calculator.Calculation import Addition, Subtraction, Multiplication, Division
-
-
 def test_calculation_addition_instance():
     """Testing the Calculator Addition"""
     # ARRANGE
@@ -12,7 +10,6 @@ def test_calculation_addition_instance():
     # ASSERT
     assert isinstance(calculation, Addition)
 
-
 def test_calculation_subtraction_instance():
     """Testing the Calculator Subtract"""
     # ARRANGE
@@ -21,6 +18,7 @@ def test_calculation_subtraction_instance():
     calculation = Subtraction.create(tuple_list)
     # ASSERT
     assert isinstance(calculation, Subtraction)
+
 
 
 def test_calculation_multiplication_instance():

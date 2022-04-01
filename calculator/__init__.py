@@ -1,7 +1,5 @@
 """This is the Calculator Class"""
 from calculator.Calculation import Addition, Subtraction, Multiplication, Division
-
-
 class Calculator:
     """This is the default result property"""
 

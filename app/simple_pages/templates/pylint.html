@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container-fluid">
+        <h4 class="neonblue mt-4"><u>Pytest</u></h4>️ ️
+        <p class="fs-20 mt--2"><span class="fs-4">P</span>ytest is a testing framework based on python.</p>
+        <p>It is mainly used to write API test cases.
+            Pytest is the framework that makes it easy to write, test, and
+            scale
+            to support complex testing for the applications and libraries. It is the most popular Python package for
+            testing. The basis for a rich ecosystem of testing is plugins and extensions.
+            The way pytest is designed is as a very extensible system, easy to write plugins and there are a lot of
+            plugins present in the pytest that are used for various purposes. Testing is very important before
+            delivering the code in production.</p>
+
+        <div class="row align-item-start">
+            <div class="col-5">
+                <h5>Some of Advantages of pytest</h5>
+                <li>Can run tests in parallel.</li>
+                <li>Very easy to start with because of its simple and easy syntax.</li>
+                <li>Can run a specific test or a subset of tests.</li>
+                <li>Automatically detect tests</li>
+                <li>It has useful plugins, Skip tests and its open source.</li>
+                The screenshot here is of successfully ran pytest on calculator project as
+                well as simple pages included in this git.
+            </div>
+            <div class="col-7"><img
+                    src="{{ url_for('static', filename='images/successpytest.png') }}"
+                    class="img-fluid" alt="passedpytest" id="zoomA">
+            </div>
+            <div class="row mt-4">
+                <div class="col-7">
+                    <h4 class="neonblue"><u>Comands to run Pytest : </u></h4>
+                    <ul class="list-unstyled">
+                        <li><span class="offwhite">pip install -U pytest</span></li>
+                    </ul>
+                    <p> for instalation purpose.</p>
+                    </li>
+                    <p> proceed to run a test by running a command</p>
+                    <ul class="list-unstyled">
+                        <li><span class="offwhite"> python -m pytest</span></li>
+                    </ul>
+                    <p>Here as we can see in our figure, we see docker container running and we use same
+                        interpreter from that container by using command <span class="offwhite">pytest</span>
+                        we can see all green passed pytest results.
+                        program includes docker container that includes all necessary thing we need for the purpose of
+                        this
+                        exercise. That means we can skip and install and as long as our docker container is running, and
+                        we are
+                        using an we can simply use this command</p>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-4 mt-4">
+                </div>
+                <h1 class="b1"></h1>
+                <h4 class="neonblue mt-3"><u>What is Pylint?</u></h4>️ ️
+                <p class="fs-20"><span class="fs-4">P</span>ylint is a source-code, bug and quality checker for the
+                    Python programming language.</p>
+                <p>
+                    It can also look for certain type errors, it can recommend suggestions
+                    about how particular blocks can be refactored and can offer you details about the code's complexity.
+                    If you are coding in Python, the computer does not catch bugs for you. Therefore, you need a lint
+                    tool, like Pylint, to find errors. The default coding style used by Pylint is similar to PEP 8.
+                    Pylint will display number of messages as it does code analysis and code are given an
+                    overall mark based on number and severity of warnings and errors.
+                    itself. It is a preferred tool having special abilities to check length of code, provides
+                    the ability to check code as per coding standards such as well-formed variable names.
+                    This also checks if user is using imported modules.
+                </p>
+                <h4 class="neonblue mt-3"><u>Installation & Running Pylint in Pycharm?</u></h4>
+                <div class="row aling-items-start">
+                    <div class="col-6">
+                        <p><span class="fs-4">I</span>f we are using Python simply using <span
+                                class="offwhite">pip install pylint</span> this command we can install pylint. While,
+                            even through pycharm its also possible using :
+                        <ul class="list-unstyled indent">
+                            <li> 1. Go to Preferences > Plugins > Browse repositories...</li>
+                            <li>2. Right-click on the plugin named Pylint, select Download and Install and restart
+                                PyCharm
+                                when
+                                prompted
+                            </li>
+                        </ul>
+                        </p>
+                        <p>In our project using docker container we can run pylint using command:</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">pytest --pylint</span></li>
+                        </ul>
+                        <p><strong>Running :</strong></p>
+                        <p>
+                            Pylint is meant to be called from the command line.
+                            You should give Pylint the name of a
+                            python package or module, or some number of packages or modules. Pylint will not import this
+                            package or module, though uses Python internals to locate them and as such is subject to the
+                            same rules and configuration.
+                        <ul class="list-unstyled">
+                            <span class="offwhite">pylint mymodule.py</span></ul>
+                        instead of mymodule any filename can be present .
+
+                        </p>
+
+                        <p><strong>Pylint</strong> is fully user customizable and has integral special functions to
+                            control individual errors and alerts within the user’s code. It gives user flexibility to
+                            write their own custom plugin and executable from an extensive configuration file.
+
+                            Figure shows examples of pylint in calculator
+                            program.
+                        </p>
+                    </div>
+
+
+                    <div class="col-6">
+                        <img src="{{ url_for('static', filename='images/pylint success.png') }}"
+                             class="img-fluid" alt="pylintpass" id="zoomA">
+                        <p class="fs-14"><em>successfully passed pylint test</em></p>
+                        <img src="{{ url_for('static', filename='images/cov.png') }}"
+                             class="img-fluid py-5" alt="pylintdisable" id="zoomA">
+                    </div>
+
+                    <h1 class="b1"></h1>
+                    <h4 class="neonblue mt-3"><u>What is Coverage in Python?</u></h4>
+                    <p><span class="fs-4">C</span>overage Coverage.py is a tool for measuring code
+                        coverage of Python programs. It monitors your program, noting which parts of the code have been
+                        executed, then analyzes the source to identify code that could have been executed but was not.
+                        Coverage measurement is typically used to gauge the effectiveness of tests.
+                        Code coverage is a metric that can help you understand how much of your source is tested. It's a
+                        very useful metric that can help you assess the quality of your test suite, and we will see here
+                        how you can get started with your projects.
+                    </p>
+                    <strong>Coverage benefits in various ways: </strong>
+                    <li>Seamless Integration within IDE and Continuous Integration Environments</li>
+                    <li>For advanced uses, there’s an API, and the result data is available in a SQLite
+                        database.
+                    </li>
+                    <li> Support for multiple application platforms</li>
+                    <li> Code coverage data enables easy elimination of errors and dead code</li>
+                    <li>Code coverage information enables introduction of test cases</li>
+                    <li>Test coverage reports on parts of the code base that necessary test cases haven’t covered.</li>
+                </div>
+
+
+                <div class="row align-items-start">
+                    <div class="col-6">
+                        <h5>How to implement coverage: </h5>
+                        <p>For installing coverage command</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">pip install coverage</span></li>
+                        </ul>
+                        <p> Run coverage with command</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">coverage run</span> or <span
+                                    class="offwhite">python -m coverage</span></li>
+                        </ul>
+                        <p>Or use pytest </p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">pytest -cov</span> or <span class="offwhite">pytest --cov</span>
+                            </li>
+                        </ul>
+                        <p>Understanding code coverage tools and test coverage are vital for software
+                            engineers and architects. These concepts can help clean, strengthen and refine code so that
+                            the resulting software is the highest possible quality. QAs and developers can create
+                            result-driven, sophisticated codes by implementing code coverage tools.
+                            Levels between 70 and 90 percent suggest reliable software, according to a review of
+                            academic studies that examined the correlation between software quality and code coverage.
+                            As we can see in the figure coverage is shown in the terminal with command pytest --cov.
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="{{ url_for('static', filename='images/cov.png') }}"
+                             class="img-fluid" alt="coveragereport99" id="zoomA">
+                        <p class="fs-14"><em>Coverage achieved</em></p>
+                    </div>
+                </div>
+
+                <h1 class="b1"></h1>
+                <h4 class="neonblue mt-3"><u>What is Unit testing?</u></h4>
+                <p class="fs-20">Unit testing is a software testing method by which individual units of source code
+                    are put under various tests to determine whether they are fit for use (Source). It determines
+                    and ascertains the quality of your code.</p>
+                <div class="row">
+                    <div class="col-8">
+                        <p>
+                            The unit test framework in Python is called unittest, which comes packaged with Python.
+                            unittest.main() provides a command-line interface to the test script.On running the above
+                            script from the command line.During test case execution, various frameworks log tests that
+                            fail any criterion and report them in a summary. The developers are expected to write
+                            automated test scripts, which ensures that each and every section or a unit meets its design
+                            and behaves as expected.
+                            Unit testing makes your code future proof since you anticipate the cases where your code
+                            could
+                            potentially fail or produce a bug. Though you cannot predict all of the cases, you still
+                            address
+                            most of them.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="{{ url_for('static', filename='images/What-are-Unit-Testing-best-practices.jpeg') }}"
+                             class="img-fluid" alt="unittest1" id="zoomA">
+                        <p class="fs-14"><em>unit testing features</em></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+    <h1 class="b1 pt-5"></h1>
+    <div class="container ">
+        <p class="fs-14">Resources:
+        <ul class="fs-14">
+            <li>
+                <a href="https://www.softwaretestinghelp.com/pytest-tutorial/#:~:text=Python%20offers%20three%20types%20of%20testing%3A%201%20Unittest%3A,it%20easy%20to%20write%20test%20cases%20in%20Python.
+"
+                   class="card-link darkpink" target="_blank">Pytest</a>
+            </li>
+            <li>
+                <a href="https://pylint.pycqa.org/en/latest/"
+                   class="card-link darkpink" target="_blank">Pylint</a>
+            </li>
+            <li>
+                <a href="https://www.datacamp.com/community/tutorials/unit-testing-python"
+                   class="card-link darkpink" target="_blank">Unit testing</a>
+            </li>
+            <li>
+                <a href="https://www.sealights.io/code-quality/code-coverage-metrics/"
+                   class="card-link darkpink" target="_blank">Coverage</a>
+            </li>
+        </ul>
+    </div>
+
+    </div></div>
+
+{% endblock %}

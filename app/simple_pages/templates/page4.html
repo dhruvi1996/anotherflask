@@ -16,7 +16,7 @@
     </div>
     <div class="row align-items stretch">
         <div class="col-6 py-3">
-            <h4><u>Project Workflow :</u></h4>
+            <h4 class="neonblue"><u>Project Workflow:</u></h4>️
             <p>When i am in development i probably want to check my code changes in real-time.
                 The common way to do this is mounting a volume with my source code in the container that has the
                 runtime of application. But for production this works differently. Hence, in my app project we have
@@ -29,7 +29,7 @@
                 If it works as we expect then we can see image on dockerhub and than we proceed to push and see our main
                 app updated.
             </p>
-            <h4 class="mt-5">How I step up my project!!!</h4>
+            <h4 class="mt-5 neonblue">How I step up my project!!!</h4>
             Following are the steps I used to create,clone,push my app !!!
             <ul>
                 <ul class="mt-1">
@@ -85,8 +85,8 @@
             </ul>
         </div>
         <div class="col-6 mt-3">
-            <img src="{{ url_for('static', filename='images/dev:prod.png') }}" class="img-fluid" alt="dev:prod">
-            <img src="{{ url_for('static', filename='images/worklows.png') }}" class="img-fluid py-4" alt="worklows">
+            <img src="{{ url_for('static', filename='images/dev:prod.png') }}" class="img-fluid" alt="dev:prod" id="zoomA">
+            <img src="{{ url_for('static', filename='images/worklows.png') }}" class="img-fluid py-4" alt="worklows" id="zoomA">
         </div>
     </div>
 {% endblock %}

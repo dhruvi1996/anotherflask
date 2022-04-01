@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container"><h4><u>What is Python?</u></h4>
+    <div class="container">
+    <h4 class="neonblue"><u>What is PYTHON?</u></h4>️
         <p><span class="fs-3">P</span>ython is commonly used for developing websites and software, task
             automation, data analysis, and data visualization. Since it's relatively easy to learn, Python has been
             adopted by many non-programmers such as accountants and scientists, for a variety of everyday tasks, like
             organizing finances.
         </p>
     <div>
-    <div class="container"><h4><u>What is Pytest?</u></h4>
+    <div class="container">
+        <h4 class="neonblue"><u>What is PYTEST?</u></h4>️
         <p><span class="fs-3">P</span>ytest is a testing framework that allows users to write test
                 codes
                 using Python programming language. It helps you to write simple and scalable test cases for databases,
@@ -42,8 +44,8 @@
                     </div>
                 </div>
             </div>
-            <h4><u>What is Flask???</u></h4>
-            <u><p><span class="fs-3">Flask :</span></u> is a web framework, it’s a Python module
+            <h4 class="neonblue"><u>What is FLASK?</u></h4>️
+            <u><p><span class="fs-3 neonblue">Flask :</span></u> is a web framework, it’s a Python module
                 that lets you develop web applications easily. It’s has a small and easy-to-extend core: it’s a
                 microframework that doesn’t include an ORM (Object Relational Manager) or such features.
                 Flask is used for developing web applications using python, implemented on Werkzeug and Jinja2.
@@ -52,7 +54,7 @@
             </p>
             <div class="row align-items">
                 <div class="col-6">
-                    <u><p><span class="fs-3">Flask Blueprints </span> </u>Basically, a flask blueprint is a way
+                    <u><p><span class="fs-3 neonblue">Flask Blueprints </u></span>Basically, a flask blueprint is a way
                         for you
                         to organize your flask application into smaller and re-usable application.
                         Just like a normal flask application, a blueprint defines a collection of views, templates and
@@ -64,7 +66,7 @@
                         blueprint is registered with the application when it is available in the factory function.
                     </p>
 
-                    <u><p><span class="fs-3">Simple Pages:</span></u> we use these HTML files, (templates) to
+                    <u><p><span class="fs-3 neonblue">Simple Pages:</span></u> we use these HTML files, (templates) to
                         build all of your application pages, such as the main page where we’ll display the current blog
                         posts, the page of the blog post, the page where the user can add a new post, and so on.
                         Here for the project we had simple pages files consisting of base.html(root of the file) which
@@ -76,11 +78,13 @@
                     </p>
                 </div>
                 <div class="col-6">
-                    <img src="{{ url_for('static', filename='images/3407178_5bd8_3.jpg.webp') }}" class="img-fluid"
-                         alt="3407178_5bd8_3">
+                    <img src="{{ url_for('static', filename='images/failed pytest.png') }}" class="img-fluid"
+                         alt="3407178_5bd8_3" id="zoomA">
+                    <p class="fs-14"><em>Figure shows failed pytest</em></p>
 
-                    <img src="{{ url_for('static', filename='images/Screen Shot 2022-03-08 at 12.03.51 AM.png') }}" class="img-fluid py-4"
-                         alt="Screen Shot 2022-03-08 at 12.03.51 AM">
+                    <img src="{{ url_for('static', filename='images/pylint success.png') }}" class="img-fluid py-4"
+                         alt="Screen Shot 2022-03-08 at 12.03.51 AM" id="zoomA">
+                    <p class="fs-14"><em>Figure shows success pytest</em></p>
 
                 </div>
             </div>

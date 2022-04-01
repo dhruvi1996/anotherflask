@@ -24,7 +24,7 @@
                 well as simple pages included in this git.
             </div>
             <div class="col-7"><img
-                    src="{{ url_for('static', filename='images/Screen Shot 2022-03-08 at 12.03.51 AM.png') }}"
+                    src="{{ url_for('static', filename='images/successpytest.png') }}"
                     class="img-fluid" alt="passedpytest" id="zoomA">
             </div>
             <div class="row mt-4">
@@ -102,22 +102,18 @@
                             control individual errors and alerts within the user’s code. It gives user flexibility to
                             write their own custom plugin and executable from an extensive configuration file.
 
-                            Figure shows examples of <em>pylint disable</em> message used in calculator
+                            Figure shows examples of pylint in calculator
                             program.
                         </p>
                     </div>
 
 
                     <div class="col-6">
-                        <img src="{{ url_for('static', filename='images/pylintfail.png') }}"
-                             class="img-fluid" alt="pylintfail" id="zoomA">
-                        <p class="fs-14"><em>Figure 4 Results of failed pylint test</em></p>
-                        <img src="{{ url_for('static', filename='images/pylintpass.png') }}"
+                        <img src="{{ url_for('static', filename='images/pylint success.png') }}"
                              class="img-fluid" alt="pylintpass" id="zoomA">
-                        <p class="fs-14"><em>Figure 5 Results of successfully passed pylint test</em></p>
-                        <img src="{{ url_for('static', filename='images/Screen Shot 2022-03-31 at 3.58.37 PM.png') }}"
+                        <p class="fs-14"><em>successfully passed pylint test</em></p>
+                        <img src="{{ url_for('static', filename='images/cov.png') }}"
                              class="img-fluid py-5" alt="pylintdisable" id="zoomA">
-                        <p class="fs-14"><em>Figure 6 </em></p>
                     </div>
 
                     <h1 class="b1"></h1>
@@ -165,7 +161,13 @@
                             result-driven, sophisticated codes by implementing code coverage tools.
                             Levels between 70 and 90 percent suggest reliable software, according to a review of
                             academic studies that examined the correlation between software quality and code coverage.
+                            As we can see in the figure coverage is shown in the terminal with command pytest --cov.
                         </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="{{ url_for('static', filename='images/cov.png') }}"
+                             class="img-fluid" alt="coveragereport99" id="zoomA">
+                        <p class="fs-14"><em>Coverage achieved</em></p>
                     </div>
                 </div>
 
@@ -192,6 +194,7 @@
                     <div class="col-4">
                         <img src="{{ url_for('static', filename='images/What-are-Unit-Testing-best-practices.jpeg') }}"
                              class="img-fluid" alt="unittest1" id="zoomA">
+                        <p class="fs-14"><em>unit testing features</em></p>
 
                     </div>
                 </div>
@@ -208,19 +211,19 @@
             <li>
                 <a href="https://www.softwaretestinghelp.com/pytest-tutorial/#:~:text=Python%20offers%20three%20types%20of%20testing%3A%201%20Unittest%3A,it%20easy%20to%20write%20test%20cases%20in%20Python.
 "
-                   class="card-link darkgrey" target="_blank">Pytest</a>
+                   class="card-link darkpink" target="_blank">Pytest</a>
             </li>
             <li>
                 <a href="https://pylint.pycqa.org/en/latest/"
-                   class="card-link darkgrey" target="_blank">Pylint</a>
+                   class="card-link darkpink" target="_blank">Pylint</a>
             </li>
             <li>
                 <a href="https://www.datacamp.com/community/tutorials/unit-testing-python"
-                   class="card-link darkgrey" target="_blank">Unit testing</a>
+                   class="card-link darkpink" target="_blank">Unit testing</a>
             </li>
             <li>
                 <a href="https://www.sealights.io/code-quality/code-coverage-metrics/"
-                   class="card-link darkgrey" target="_blank">Coverage</a>
+                   class="card-link darkpink" target="_blank">Coverage</a>
             </li>
         </ul>
     </div>
